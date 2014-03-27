@@ -10,7 +10,7 @@ void testApp::setup()
 	showOverlay = false;
 	predictive = true;
 	
-	ofHideCursor();
+//	ofHideCursor();
 	
 	oculusRift.baseCamera = &cam;
 	oculusRift.setup();
@@ -20,17 +20,12 @@ void testApp::setup()
 	cam.end();
 	cam.setPosition(0,0,0);
 
-	//ofDisableArbTex();
-	ofSpherePrimitive p = ofSpherePrimitive(100.0,100);
-	sphereMesh = p.getMesh();
-	for(int i = 0; i < sphereMesh.getNumVertices(); i++){
-		sphereMesh.setTexCoord(i,sphereMesh.getTexCoord(i) * ofVec2f(1920.0,1080.0));
-	}
 
-	videoTexture.allocate(1920, 1080, GL_RGB);
-
-	player.loadMovie("monolake.mov");
-	player.play();
+	#ifndef TARGET_WIN32
+	player.setUseTexture(false);
+	#endif
+	//put video path here:
+	
 }
 
 
@@ -39,6 +34,20 @@ void testApp::update()
 {
 	player.update();
 	if(player.isFrameNew()){
+		
+		if(!videoTexture.isAllocated() ||
+		   videoTexture.getWidth() != player.getWidth() ||
+		   videoTexture.getHeight() !=player.getHeight())
+		{
+			ofSpherePrimitive p = ofSpherePrimitive(100.0,20);
+			sphereMesh = p.getMesh();
+			
+			for(int i = 0; i < sphereMesh.getNumVertices(); i++){
+				sphereMesh.setTexCoord(i,sphereMesh.getTexCoord(i) * ofVec2f(player.getWidth(),player.getHeight()));
+			}
+			videoTexture.allocate(player.getWidth(),player.getHeight(), GL_RGB);
+		}
+
 		videoTexture.loadData(player.getPixelsRef());
 	}
 }
@@ -49,31 +58,7 @@ void testApp::draw()
 
 	
 	if(oculusRift.isSetup()){
-		
-		//if(showOverlay){
-		//	
-		//	oculusRift.beginOverlay(-230, 320,240);
-		//	ofRectangle overlayRect = oculusRift.getOverlayRectangle();
-		//	
-		//	ofPushStyle();
-		//	ofEnableAlphaBlending();
-		//	ofFill();
-		//	ofSetColor(255, 40, 10, 200);
-		//	
-		//	ofRect(overlayRect);
-		//	
-		//	ofSetColor(255,255);
-		//	ofFill();
-		//	ofDrawBitmapString("ofxOculusRift by\nAndreas Muller\nJames George\nJason Walters\nElie Zananiri\nFPS:"+ofToString(ofGetFrameRate())+"\nPredictive Tracking " + (oculusRift.getUsePredictiveOrientation() ? "YES" : "NO"), 40, 40);
-  //          
-  //          ofSetColor(0, 255, 0);
-  //          ofNoFill();
-  //          ofCircle(overlayRect.getCenter(), 20);
-		//	
-		//	ofPopStyle();
-		//	oculusRift.endOverlay();
-		//}
-  //      
+
 
         ofSetColor(255);
 
@@ -96,7 +81,7 @@ void testApp::draw()
 		cam.end();
 	}
 
-	//image.draw(0,0);
+//	videoTexture.draw(0,0);
 	
 }
 
@@ -104,16 +89,16 @@ void testApp::draw()
 void testApp::drawScene()
 {
 	ofPushStyle();
-	//ofNoFill();
-	//ofSetColor(ofColor::red);
 	ofScale(1,-1,1);
 	
 	videoTexture.bind();
-	//ofDrawSphere(0,0,0, 100);
 	sphereMesh.draw();
 	videoTexture.unbind();
-	//sphereMesh.drawWireframe();
-
+	
+	ofDisableDepthTest();
+	sphereMesh.drawWireframe();
+	ofEnableDepthTest();
+	
 	ofPopStyle();
     
 }
@@ -197,5 +182,7 @@ void testApp::gotMessage(ofMessage msg)
 //--------------------------------------------------------------
 void testApp::dragEvent(ofDragInfo dragInfo)
 {
+	player.loadMovie( dragInfo.files[0] );
+	player.play();
 
 }

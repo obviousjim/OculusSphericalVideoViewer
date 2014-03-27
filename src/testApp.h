@@ -2,8 +2,9 @@
 
 #include "ofMain.h"
 #include "ofxOculusRift.h"
+#ifdef TARGET_WIN32
 #include "ofDirectShowPlayer.h"
-
+#endif
 class testApp : public ofBaseApp
 {
   public:
@@ -25,8 +26,14 @@ class testApp : public ofBaseApp
 	void gotMessage(ofMessage msg);
 
 	ofImage image;
-	ofxOculusRift		oculusRift;
+	ofxOculusRift oculusRift;
+	
+	#ifdef TARGET_WIN32
 	ofDirectShowPlayer player;
+#else
+	ofVideoPlayer player;
+	#endif
+	
 	ofTexture videoTexture;
 	ofMesh sphereMesh;
 

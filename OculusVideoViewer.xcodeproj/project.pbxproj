@@ -26,6 +26,11 @@
 		E4C2424810CC5A17004149E2 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4C2424510CC5A17004149E2 /* Cocoa.framework */; };
 		E4C2424910CC5A17004149E2 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4C2424610CC5A17004149E2 /* IOKit.framework */; };
 		E4EB6799138ADC1D00A09F29 /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBAB23BE13894E4700AA2426 /* GLUT.framework */; };
+		E70AB76218E2211F001E6A32 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E70AB76118E2211F001E6A32 /* CoreVideo.framework */; };
+		E70AB76418E22124001E6A32 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E70AB76318E22124001E6A32 /* CoreMedia.framework */; };
+		E70AB76618E2212C001E6A32 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E70AB76518E2212C001E6A32 /* QuartzCore.framework */; };
+		E70AB76818E22140001E6A32 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E70AB76718E22140001E6A32 /* Accelerate.framework */; };
+		E70AB76A18E221CC001E6A32 /* QTKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E70AB76918E221CC001E6A32 /* QTKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,7 +78,7 @@
 		E45BE9770E8CC7DD009D7055 /* CoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreServices.framework; path = /System/Library/Frameworks/CoreServices.framework; sourceTree = "<absolute>"; };
 		E45BE9790E8CC7DD009D7055 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = /System/Library/Frameworks/OpenGL.framework; sourceTree = "<absolute>"; };
 		E45BE97A0E8CC7DD009D7055 /* QuickTime.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuickTime.framework; path = /System/Library/Frameworks/QuickTime.framework; sourceTree = "<absolute>"; };
-		E4B69B5B0A3A1756003C02F2 /* OculusRenderingBasicDebug.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OculusRenderingBasicDebug.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E4B69B5B0A3A1756003C02F2 /* OculusVideoViewerDebug.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OculusVideoViewerDebug.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4B69E1D0A3A1BDC003C02F2 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = src/main.cpp; sourceTree = SOURCE_ROOT; };
 		E4B69E1E0A3A1BDC003C02F2 /* testApp.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = testApp.cpp; path = src/testApp.cpp; sourceTree = SOURCE_ROOT; };
 		E4B69E1F0A3A1BDC003C02F2 /* testApp.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = testApp.h; path = src/testApp.h; sourceTree = SOURCE_ROOT; };
@@ -83,6 +88,11 @@
 		E4C2424610CC5A17004149E2 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = /System/Library/Frameworks/IOKit.framework; sourceTree = "<absolute>"; };
 		E4EB691F138AFCF100A09F29 /* CoreOF.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = CoreOF.xcconfig; path = ../../../libs/openFrameworksCompiled/project/osx/CoreOF.xcconfig; sourceTree = SOURCE_ROOT; };
 		E4EB6923138AFD0F00A09F29 /* Project.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Project.xcconfig; sourceTree = "<group>"; };
+		E70AB76118E2211F001E6A32 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
+		E70AB76318E22124001E6A32 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		E70AB76518E2212C001E6A32 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		E70AB76718E22140001E6A32 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
+		E70AB76918E221CC001E6A32 /* QTKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QTKit.framework; path = System/Library/Frameworks/QTKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +100,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E70AB76A18E221CC001E6A32 /* QTKit.framework in Frameworks */,
+				E70AB76818E22140001E6A32 /* Accelerate.framework in Frameworks */,
+				E70AB76618E2212C001E6A32 /* QuartzCore.framework in Frameworks */,
+				E70AB76418E22124001E6A32 /* CoreMedia.framework in Frameworks */,
+				E70AB76218E2211F001E6A32 /* CoreVideo.framework in Frameworks */,
 				E4EB6799138ADC1D00A09F29 /* GLUT.framework in Frameworks */,
 				E4328149138ABC9F0047C5CB /* openFrameworksDebug.a in Frameworks */,
 				E45BE97B0E8CC7DD009D7055 /* AGL.framework in Frameworks */,
@@ -154,7 +169,7 @@
 				CBA82EC11736A31D004EFE06 /* ofxOculusRift.cpp */,
 			);
 			name = src;
-			path = ../src;
+			path = ../../../addons/ofxOculusRift/src;
 			sourceTree = "<group>";
 		};
 		CBA82EC41736A327004EFE06 /* ofxOculusRift */ = {
@@ -185,12 +200,17 @@
 		E4B69B4A0A3A1720003C02F2 = {
 			isa = PBXGroup;
 			children = (
+				E70AB76918E221CC001E6A32 /* QTKit.framework */,
+				E70AB76718E22140001E6A32 /* Accelerate.framework */,
+				E70AB76518E2212C001E6A32 /* QuartzCore.framework */,
+				E70AB76318E22124001E6A32 /* CoreMedia.framework */,
+				E70AB76118E2211F001E6A32 /* CoreVideo.framework */,
 				E4EB6923138AFD0F00A09F29 /* Project.xcconfig */,
 				E4B69E1C0A3A1BDC003C02F2 /* src */,
 				E4EEC9E9138DF44700A80321 /* openFrameworks */,
 				BB4B014C10F69532006C3DED /* addons */,
 				E45BE5980E8CC70C009D7055 /* frameworks */,
-				E4B69B5B0A3A1756003C02F2 /* OculusRenderingBasicDebug.app */,
+				E4B69B5B0A3A1756003C02F2 /* OculusVideoViewerDebug.app */,
 			);
 			sourceTree = "<group>";
 		};
@@ -217,9 +237,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		E4B69B5A0A3A1756003C02F2 /* OculusRenderingBasic */ = {
+		E4B69B5A0A3A1756003C02F2 /* OculusVideoViewer */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E4B69B5F0A3A1757003C02F2 /* Build configuration list for PBXNativeTarget "OculusRenderingBasic" */;
+			buildConfigurationList = E4B69B5F0A3A1757003C02F2 /* Build configuration list for PBXNativeTarget "OculusVideoViewer" */;
 			buildPhases = (
 				E4B69B580A3A1756003C02F2 /* Sources */,
 				E4B69B590A3A1756003C02F2 /* Frameworks */,
@@ -231,9 +251,9 @@
 			dependencies = (
 				E4EEB9AC138B136A00A80321 /* PBXTargetDependency */,
 			);
-			name = OculusRenderingBasic;
+			name = OculusVideoViewer;
 			productName = myOFApp;
-			productReference = E4B69B5B0A3A1756003C02F2 /* OculusRenderingBasicDebug.app */;
+			productReference = E4B69B5B0A3A1756003C02F2 /* OculusVideoViewerDebug.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -244,7 +264,7 @@
 			attributes = {
 				LastUpgradeCheck = 0420;
 			};
-			buildConfigurationList = E4B69B4D0A3A1720003C02F2 /* Build configuration list for PBXProject "OculusRenderingBasic" */;
+			buildConfigurationList = E4B69B4D0A3A1720003C02F2 /* Build configuration list for PBXProject "OculusVideoViewer" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -265,7 +285,7 @@
 			);
 			projectRoot = "";
 			targets = (
-				E4B69B5A0A3A1756003C02F2 /* OculusRenderingBasic */,
+				E4B69B5A0A3A1756003C02F2 /* OculusVideoViewer */,
 			);
 		};
 /* End PBXProject section */
@@ -343,6 +363,7 @@
 					"-D__MACOSX_CORE__",
 					"-lpthread",
 				);
+				SDKROOT = macosx10.8;
 			};
 			name = Debug;
 		};
@@ -373,6 +394,7 @@
 					"-D__MACOSX_CORE__",
 					"-lpthread",
 				);
+				SDKROOT = macosx10.8;
 			};
 			name = Release;
 		};
@@ -456,7 +478,7 @@
 					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_51)",
 					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_52)",
 				);
-				PRODUCT_NAME = OculusRenderingBasicDebug;
+				PRODUCT_NAME = OculusVideoViewerDebug;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -540,7 +562,7 @@
 					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_50)",
 					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_51)",
 				);
-				PRODUCT_NAME = OculusRenderingBasic;
+				PRODUCT_NAME = OculusVideoViewer;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -548,7 +570,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		E4B69B4D0A3A1720003C02F2 /* Build configuration list for PBXProject "OculusRenderingBasic" */ = {
+		E4B69B4D0A3A1720003C02F2 /* Build configuration list for PBXProject "OculusVideoViewer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E4B69B4E0A3A1720003C02F2 /* Debug */,
@@ -557,7 +579,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E4B69B5F0A3A1757003C02F2 /* Build configuration list for PBXNativeTarget "OculusRenderingBasic" */ = {
+		E4B69B5F0A3A1757003C02F2 /* Build configuration list for PBXNativeTarget "OculusVideoViewer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E4B69B600A3A1757003C02F2 /* Debug */,
