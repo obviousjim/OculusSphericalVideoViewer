@@ -1,4 +1,4 @@
-***Oculus Spherical Video Player***
+# Oculus Spherical Video Playe
 
 ![Video](https://raw.githubusercontent.com/obviousjim/OculusSphericalVideoViewer/master/OculusVideoPlayer.png)
 
@@ -6,11 +6,11 @@ By [James George](http://jamesgeorge.org)
 [@obviousjim](https://twitter.com/obviousjim) | http://jamesgeorge.org
 
 Designed in collaboration with [Pomp &amp; Clout](pompandclout.com) for 
-Booka Shade - Crossing Borders VR Edition https://vimeo.com/88360151
+[Booka Shade - Crossing Borders VR Edition](http://www.pompandclout.com/booka-shade-crossing-borders-vr-edition)
 
 Works great with spherical video shot with something like http://freedom360.us/ that has been distorted using [Equirectangular Projection](http://en.wikipedia.org/wiki/Equirectangular_projection)
 
-**TO USE**
+## TO USE
 
 [DOWNLOAD THE DMG (OS X ONLY)](http://www.jamesgeorge.org/uploads/OulusVideoPlayer.dmg)
 
@@ -24,7 +24,7 @@ Works great with spherical video shot with something like http://freedom360.us/ 
 
 5) Hit 'f' to go full screen.
 
-**TO BUILD FROM SOURCE**
+## TO BUILD FROM SOURCE
 
 1) Download Xcode from the Mac App Store
 
