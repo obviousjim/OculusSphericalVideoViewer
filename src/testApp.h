@@ -28,7 +28,6 @@ class testApp : public ofBaseApp
 	void dragEvent(ofDragInfo dragInfo);
 	void gotMessage(ofMessage msg);
 
-	ofImage image;
 	ofxOculusRift oculusRift;
 	
 	#ifdef TARGET_WIN32
@@ -41,9 +40,10 @@ class testApp : public ofBaseApp
 	ofxFTGLFont font;
 	ofxFTGLFont fontSmall;
 	
+	void createMeshWithTexture(ofTexture& texture);
+	ofImage videoTestPattern;
 	ofTexture videoTexture;
 	ofMesh sphereMesh;
-
 	ofCamera cam;
     
 };

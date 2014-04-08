@@ -10,7 +10,7 @@ void testApp::setup() {
 	ofSetVerticalSync(true);
 
 	//look in the bundle!
-	#if defined(VIDEO_FILE_NAME) && defined(TARGET_OSX)
+	#ifdef TARGET_OSX
 	ofDisableDataPath();
     CFBundleRef mainBundle = CFBundleGetMainBundle();
     CFURLRef resourcesURL = CFBundleCopyResourcesDirectoryURL(mainBundle);
@@ -39,11 +39,16 @@ void testApp::setup() {
 		
 		//if this is set then the app looks for a video right away
 		#ifdef VIDEO_FILE_NAME
-		player.loadMovie(STRINGIZE(VIDEO_FILE_NAME));
+		player.loadMovie( STRINGIZE(VIDEO_FILE_NAME) );
+		player.setLoopState(OF_LOOP_NORMAL);
 		player.play();
+		ofToggleFullscreen();
+		#else
+		videoTestPattern.loadImage("video_test_pattern.png");
+		createMeshWithTexture(videoTestPattern.getTextureReference());
 		#endif
 		
-		ofToggleFullscreen();
+		
 	}
 	
 }
@@ -62,18 +67,27 @@ void testApp::update()
 		   videoTexture.getWidth() != player.getWidth() ||
 		   videoTexture.getHeight() != player.getHeight())
 		{
-			ofSpherePrimitive p = ofSpherePrimitive(100.0,20);
-			sphereMesh = p.getMesh();
-			
-			for(int i = 0; i < sphereMesh.getNumVertices(); i++){
-				sphereMesh.setTexCoord(i,sphereMesh.getTexCoord(i) * ofVec2f(player.getWidth(),player.getHeight()));
-			}
-			
 			videoTexture.allocate(player.getWidth(),player.getHeight(), GL_RGB);
+			createMeshWithTexture(videoTexture);
 		}
 
 		videoTexture.loadData(player.getPixelsRef());
 	}
+}
+
+//--------------------------------------------------------------
+void testApp::createMeshWithTexture(ofTexture& texture){
+	
+	ofSpherePrimitive p = ofSpherePrimitive(100.0,60);
+	sphereMesh = p.getMesh();
+	
+	for(int i = 0; i < sphereMesh.getNumVertices(); i++){
+		ofVec2f texCoord = sphereMesh.getTexCoord(i);
+		texCoord.x *= texture.getWidth();
+		texCoord.y  = (1.0 - texCoord.y) * texture.getHeight();
+		sphereMesh.setTexCoord(i, texCoord);
+	}
+	
 }
 
 //--------------------------------------------------------------
@@ -82,6 +96,27 @@ void testApp::draw()
 
 	if(oculusRift.isSetup()){
 
+		ofPushStyle();
+		string instructions = "'f' toggle full screen";
+		int width = fontSmall.stringWidth(instructions);
+		ofSetColor(255*.4);
+		fontSmall.drawString(instructions,oculusRift.getOculusViewport().getWidth() - width/2, 40);
+		ofPopStyle();
+		
+		if(!videoTexture.isAllocated()){
+			int overlayWidth  = 512;
+			int overlayHeight = 512;
+			string loadText = "Drag & Drop a video";
+			width = fontSmall.stringWidth(loadText);
+			int height = fontSmall.stringHeight(loadText);
+			//draw the instructions into the viewport
+			oculusRift.beginOverlay(-250, overlayWidth,overlayHeight);
+			fontSmall.drawString(loadText,
+								 overlayWidth/2 - width/2,
+								 overlayHeight/2 - height/2);
+			oculusRift.endOverlay();
+		}
+		
         ofSetColor(255);
 
 		glEnable(GL_DEPTH_TEST);
@@ -98,12 +133,6 @@ void testApp::draw()
 		
 		glDisable(GL_DEPTH_TEST);
 		
-		ofPushStyle();
-		string instructions = "'f' toggle full screen";
-		int width = fontSmall.stringWidth(instructions);
-		ofSetColor(255*.4);
-		fontSmall.drawString(instructions,oculusRift.getOculusViewport().getWidth() - width/2, 40);
-		ofPopStyle();
     }
 	else{
 		ofPushStyle();
@@ -125,16 +154,26 @@ void testApp::drawStringCentered(string str){
 void testApp::drawScene()
 {
 	ofPushStyle();
-	ofScale(1,-1,1);
+	ofPushMatrix();
+//	ofScale(1,-1,1);
 	
-	videoTexture.bind();
-	sphereMesh.draw();
-	videoTexture.unbind();
-	
+	if(videoTexture.isAllocated()){
+		videoTexture.bind();
+		sphereMesh.draw();
+		videoTexture.unbind();
+	}
+	else{
+		videoTestPattern.getTextureReference().bind();
+		sphereMesh.draw();
+		videoTestPattern.getTextureReference().unbind();
+	}
+
+	//debug wireframe for fun
 //	ofDisableDepthTest();
 //	sphereMesh.drawWireframe();
 //	ofEnableDepthTest();
 	
+	ofPopMatrix();
 	ofPopStyle();
 }
 
@@ -145,7 +184,6 @@ void testApp::keyPressed(int key)
 		//gotta toggle full screen for it to be right
 		ofToggleFullscreen();
 	}
-
 }
 
 //--------------------------------------------------------------
@@ -192,8 +230,13 @@ void testApp::dragEvent(ofDragInfo dragInfo)
 {
 	//this is for the standalone player
 	#ifndef VIDEO_FILE_NAME
-	player.loadMovie( dragInfo.files[0] );
-	player.play();
+	if(player.loadMovie( dragInfo.files[0] )){
+		player.play();
+		player.setLoopState(OF_LOOP_NORMAL);
+	}
+	else{
+		ofSystemAlertDialog("Video failed to load.");
+	}
 	#endif
 	
 }

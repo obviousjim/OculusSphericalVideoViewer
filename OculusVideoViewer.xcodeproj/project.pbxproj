@@ -61,6 +61,36 @@
 		E70AB76618E2212C001E6A32 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E70AB76518E2212C001E6A32 /* QuartzCore.framework */; };
 		E70AB76818E22140001E6A32 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E70AB76718E22140001E6A32 /* Accelerate.framework */; };
 		E70AB76A18E221CC001E6A32 /* QTKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E70AB76918E221CC001E6A32 /* QTKit.framework */; };
+		E74C0A7618F3B57C00061B6B /* ofxFTGLSimpleLayout.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E75F62A518F3586200AADDD5 /* ofxFTGLSimpleLayout.cpp */; };
+		E74C0A7718F3B57C00061B6B /* ofxFTGLFont.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E75F62A318F3586200AADDD5 /* ofxFTGLFont.cpp */; };
+		E74C0A7818F3B57C00061B6B /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4B69E1D0A3A1BDC003C02F2 /* main.cpp */; };
+		E74C0A7918F3B57C00061B6B /* testApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4B69E1E0A3A1BDC003C02F2 /* testApp.cpp */; };
+		E74C0A7A18F3B57C00061B6B /* ofxOculusRift.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CBA82EC11736A31D004EFE06 /* ofxOculusRift.cpp */; };
+		E74C0A7C18F3B57C00061B6B /* QTKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E70AB76918E221CC001E6A32 /* QTKit.framework */; };
+		E74C0A7D18F3B57C00061B6B /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E70AB76718E22140001E6A32 /* Accelerate.framework */; };
+		E74C0A7E18F3B57C00061B6B /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E70AB76518E2212C001E6A32 /* QuartzCore.framework */; };
+		E74C0A7F18F3B57C00061B6B /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E70AB76318E22124001E6A32 /* CoreMedia.framework */; };
+		E74C0A8018F3B57C00061B6B /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E70AB76118E2211F001E6A32 /* CoreVideo.framework */; };
+		E74C0A8118F3B57C00061B6B /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBAB23BE13894E4700AA2426 /* GLUT.framework */; };
+		E74C0A8218F3B57C00061B6B /* libftgl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E75F629918F3586200AADDD5 /* libftgl.a */; };
+		E74C0A8318F3B57C00061B6B /* openFrameworksDebug.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E4328148138ABC890047C5CB /* openFrameworksDebug.a */; };
+		E74C0A8418F3B57C00061B6B /* AGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E45BE9710E8CC7DD009D7055 /* AGL.framework */; };
+		E74C0A8518F3B57C00061B6B /* ApplicationServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E45BE9720E8CC7DD009D7055 /* ApplicationServices.framework */; };
+		E74C0A8618F3B57C00061B6B /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E45BE9730E8CC7DD009D7055 /* AudioToolbox.framework */; };
+		E74C0A8718F3B57C00061B6B /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E45BE9740E8CC7DD009D7055 /* Carbon.framework */; };
+		E74C0A8818F3B57C00061B6B /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E45BE9750E8CC7DD009D7055 /* CoreAudio.framework */; };
+		E74C0A8918F3B57C00061B6B /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E45BE9760E8CC7DD009D7055 /* CoreFoundation.framework */; };
+		E74C0A8A18F3B57C00061B6B /* CoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E45BE9770E8CC7DD009D7055 /* CoreServices.framework */; };
+		E74C0A8B18F3B57C00061B6B /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E45BE9790E8CC7DD009D7055 /* OpenGL.framework */; };
+		E74C0A8C18F3B57C00061B6B /* QuickTime.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E45BE97A0E8CC7DD009D7055 /* QuickTime.framework */; };
+		E74C0A8D18F3B57C00061B6B /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4C2424410CC5A17004149E2 /* AppKit.framework */; };
+		E74C0A8E18F3B57C00061B6B /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4C2424510CC5A17004149E2 /* Cocoa.framework */; };
+		E74C0A8F18F3B57C00061B6B /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4C2424610CC5A17004149E2 /* IOKit.framework */; };
+		E74C0A9018F3B57C00061B6B /* CoreMIDI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 270A248C141220590073405C /* CoreMIDI.framework */; };
+		E74C0A9318F3B57C00061B6B /* GLUT.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = BBAB23BE13894E4700AA2426 /* GLUT.framework */; };
+		E74C0A9618F3B57C00061B6B /* HelveticaNeueBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E709DAAD18F3602500E67AA9 /* HelveticaNeueBold.ttf */; };
+		E74C0A9E18F3B5AF00061B6B /* icon_riftplayer.icns in Resources */ = {isa = PBXBuildFile; fileRef = E74C0A9D18F3B5AF00061B6B /* icon_riftplayer.icns */; };
+		E74C0AA018F3B91D00061B6B /* video_test_pattern.png in Resources */ = {isa = PBXBuildFile; fileRef = E74C0A9F18F3B91D00061B6B /* video_test_pattern.png */; };
 		E75F62E018F3586300AADDD5 /* libftgl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E75F629918F3586200AADDD5 /* libftgl.a */; };
 		E75F62E118F3586300AADDD5 /* libftgl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E75F629918F3586200AADDD5 /* libftgl.a */; };
 		E75F62EB18F3586300AADDD5 /* ofxFTGLFont.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E75F62A318F3586200AADDD5 /* ofxFTGLFont.cpp */; };
@@ -91,6 +121,13 @@
 			remoteGlobalIDString = E4B27C1410CBEB8E00536013;
 			remoteInfo = openFrameworks;
 		};
+		E74C0A7418F3B57C00061B6B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E4328143138ABC890047C5CB /* openFrameworksLib.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = E4B27C1410CBEB8E00536013;
+			remoteInfo = openFrameworks;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -111,6 +148,16 @@
 			dstSubfolderSpec = 10;
 			files = (
 				E7012CFC18F34AD800A3F1EB /* GLUT.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E74C0A9218F3B57C00061B6B /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				E74C0A9318F3B57C00061B6B /* GLUT.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -152,6 +199,10 @@
 		E70AB76518E2212C001E6A32 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		E70AB76718E22140001E6A32 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
 		E70AB76918E221CC001E6A32 /* QTKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QTKit.framework; path = System/Library/Frameworks/QTKit.framework; sourceTree = SDKROOT; };
+		E74C0A9B18F3B57C00061B6B /* OculusVideoPlayerDebug.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OculusVideoPlayerDebug.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E74C0A9C18F3B57D00061B6B /* CrossingBorders4k copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "CrossingBorders4k copy-Info.plist"; path = "/Users/focus/Documents/Xcode/of_v0.8.0_osx_release/apps/myApps/OculusSphericalVideoViewer/CrossingBorders4k copy-Info.plist"; sourceTree = "<absolute>"; };
+		E74C0A9D18F3B5AF00061B6B /* icon_riftplayer.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = icon_riftplayer.icns; sourceTree = SOURCE_ROOT; };
+		E74C0A9F18F3B91D00061B6B /* video_test_pattern.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = video_test_pattern.png; sourceTree = "<group>"; };
 		E75F627C18F3586200AADDD5 /* FTBBox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTBBox.h; sourceTree = "<group>"; };
 		E75F627D18F3586200AADDD5 /* FTBitmapGlyph.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTBitmapGlyph.h; sourceTree = "<group>"; };
 		E75F627E18F3586200AADDD5 /* FTBuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTBuffer.h; sourceTree = "<group>"; };
@@ -237,6 +288,34 @@
 				E7012CF718F34AD800A3F1EB /* Cocoa.framework in Frameworks */,
 				E7012CF818F34AD800A3F1EB /* IOKit.framework in Frameworks */,
 				E7012CF918F34AD800A3F1EB /* CoreMIDI.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E74C0A7B18F3B57C00061B6B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E74C0A7C18F3B57C00061B6B /* QTKit.framework in Frameworks */,
+				E74C0A7D18F3B57C00061B6B /* Accelerate.framework in Frameworks */,
+				E74C0A7E18F3B57C00061B6B /* QuartzCore.framework in Frameworks */,
+				E74C0A7F18F3B57C00061B6B /* CoreMedia.framework in Frameworks */,
+				E74C0A8018F3B57C00061B6B /* CoreVideo.framework in Frameworks */,
+				E74C0A8118F3B57C00061B6B /* GLUT.framework in Frameworks */,
+				E74C0A8218F3B57C00061B6B /* libftgl.a in Frameworks */,
+				E74C0A8318F3B57C00061B6B /* openFrameworksDebug.a in Frameworks */,
+				E74C0A8418F3B57C00061B6B /* AGL.framework in Frameworks */,
+				E74C0A8518F3B57C00061B6B /* ApplicationServices.framework in Frameworks */,
+				E74C0A8618F3B57C00061B6B /* AudioToolbox.framework in Frameworks */,
+				E74C0A8718F3B57C00061B6B /* Carbon.framework in Frameworks */,
+				E74C0A8818F3B57C00061B6B /* CoreAudio.framework in Frameworks */,
+				E74C0A8918F3B57C00061B6B /* CoreFoundation.framework in Frameworks */,
+				E74C0A8A18F3B57C00061B6B /* CoreServices.framework in Frameworks */,
+				E74C0A8B18F3B57C00061B6B /* OpenGL.framework in Frameworks */,
+				E74C0A8C18F3B57C00061B6B /* QuickTime.framework in Frameworks */,
+				E74C0A8D18F3B57C00061B6B /* AppKit.framework in Frameworks */,
+				E74C0A8E18F3B57C00061B6B /* Cocoa.framework in Frameworks */,
+				E74C0A8F18F3B57C00061B6B /* IOKit.framework in Frameworks */,
+				E74C0A9018F3B57C00061B6B /* CoreMIDI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -332,6 +411,8 @@
 				E4B69B5B0A3A1756003C02F2 /* CrossingBordersVRDebug.app */,
 				E7012D0018F34AD800A3F1EB /* CrossingBordersVR4kDebug.app */,
 				E7012D0118F34AD800A3F1EB /* OculusVideoViewer copy-Info.plist */,
+				E74C0A9B18F3B57C00061B6B /* OculusVideoPlayerDebug.app */,
+				E74C0A9C18F3B57D00061B6B /* CrossingBorders4k copy-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -358,6 +439,8 @@
 		E709DAAA18F3602500E67AA9 /* data */ = {
 			isa = PBXGroup;
 			children = (
+				E74C0A9F18F3B91D00061B6B /* video_test_pattern.png */,
+				E74C0A9D18F3B5AF00061B6B /* icon_riftplayer.icns */,
 				E709DACE18F3741D00E67AA9 /* icon_booka.icns */,
 				E709DAAC18F3602500E67AA9 /* font */,
 				E709DAAE18F3602500E67AA9 /* movies */,
@@ -519,6 +602,26 @@
 			productReference = E7012D0018F34AD800A3F1EB /* CrossingBordersVR4kDebug.app */;
 			productType = "com.apple.product-type.application";
 		};
+		E74C0A7218F3B57C00061B6B /* OculusVideoPlayer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E74C0A9818F3B57C00061B6B /* Build configuration list for PBXNativeTarget "OculusVideoPlayer" */;
+			buildPhases = (
+				E74C0A7518F3B57C00061B6B /* Sources */,
+				E74C0A7B18F3B57C00061B6B /* Frameworks */,
+				E74C0A9118F3B57C00061B6B /* ShellScript */,
+				E74C0A9218F3B57C00061B6B /* CopyFiles */,
+				E74C0A9418F3B57C00061B6B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E74C0A7318F3B57C00061B6B /* PBXTargetDependency */,
+			);
+			name = OculusVideoPlayer;
+			productName = myOFApp;
+			productReference = E74C0A9B18F3B57C00061B6B /* OculusVideoPlayerDebug.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -550,6 +653,7 @@
 			targets = (
 				E4B69B5A0A3A1756003C02F2 /* CrossigBorders */,
 				E7012CDE18F34AD800A3F1EB /* CrossingBorders4k */,
+				E74C0A7218F3B57C00061B6B /* OculusVideoPlayer */,
 			);
 		};
 /* End PBXProject section */
@@ -585,6 +689,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E74C0A9418F3B57C00061B6B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E74C0AA018F3B91D00061B6B /* video_test_pattern.png in Resources */,
+				E74C0A9E18F3B5AF00061B6B /* icon_riftplayer.icns in Resources */,
+				E74C0A9618F3B57C00061B6B /* HelveticaNeueBold.ttf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
@@ -602,6 +716,19 @@
 			shellScript = "cp -f ../../../libs/fmodex/lib/osx/libfmodex.dylib \"$TARGET_BUILD_DIR/$PRODUCT_NAME.app/Contents/MacOS/libfmodex.dylib\"; install_name_tool -change ./libfmodex.dylib @executable_path/libfmodex.dylib \"$TARGET_BUILD_DIR/$PRODUCT_NAME.app/Contents/MacOS/$PRODUCT_NAME\";";
 		};
 		E7012CFA18F34AD800A3F1EB /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "cp -f ../../../libs/fmodex/lib/osx/libfmodex.dylib \"$TARGET_BUILD_DIR/$PRODUCT_NAME.app/Contents/MacOS/libfmodex.dylib\"; install_name_tool -change ./libfmodex.dylib @executable_path/libfmodex.dylib \"$TARGET_BUILD_DIR/$PRODUCT_NAME.app/Contents/MacOS/$PRODUCT_NAME\";";
+		};
+		E74C0A9118F3B57C00061B6B /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -641,6 +768,18 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E74C0A7518F3B57C00061B6B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E74C0A7618F3B57C00061B6B /* ofxFTGLSimpleLayout.cpp in Sources */,
+				E74C0A7718F3B57C00061B6B /* ofxFTGLFont.cpp in Sources */,
+				E74C0A7818F3B57C00061B6B /* main.cpp in Sources */,
+				E74C0A7918F3B57C00061B6B /* testApp.cpp in Sources */,
+				E74C0A7A18F3B57C00061B6B /* ofxOculusRift.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -653,6 +792,11 @@
 			isa = PBXTargetDependency;
 			name = openFrameworks;
 			targetProxy = E7012CE018F34AD800A3F1EB /* PBXContainerItemProxy */;
+		};
+		E74C0A7318F3B57C00061B6B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = openFrameworks;
+			targetProxy = E74C0A7418F3B57C00061B6B /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1075,6 +1219,179 @@
 			};
 			name = Release;
 		};
+		E74C0A9918F3B57C00061B6B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1)",
+				);
+				FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1 = "\"$(SRCROOT)/../../../libs/glut/lib/osx\"";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_MODEL_TUNING = G4;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/Carbon.framework/Headers/Carbon.h";
+				GCC_PREPROCESSOR_DEFINITIONS = "";
+				INFOPLIST_FILE = "CrossingBorders4k copy-Info.plist";
+				INSTALL_PATH = "$(HOME)/Applications";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_1)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_2)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_3)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_4)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_5)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_6)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_7)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_8)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_9)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_10)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_11)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_12)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_13)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_14)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_15)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_2)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_3)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_7)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_8)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_9)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_10)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_11)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_12)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_13)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_16)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_17)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_18)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_19)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_20)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_21)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_22)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_23)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_24)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_25)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_26)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_27)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_28)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_29)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_30)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_31)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_32)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_33)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_34)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_35)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_36)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_37)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_38)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_39)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_40)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_41)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_42)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_43)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_44)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_45)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_46)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_47)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_48)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_49)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_50)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_51)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_52)",
+					/Users/focus/Documents/Xcode/of_v0.8.0_osx_release/addons/ofxFTGL/libs/FTGL/lib/osx,
+				);
+				PRODUCT_NAME = OculusVideoPlayerDebug;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		E74C0A9A18F3B57C00061B6B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1)",
+				);
+				FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1 = "\"$(SRCROOT)/../../../libs/glut/lib/osx\"";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G4;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/Carbon.framework/Headers/Carbon.h";
+				GCC_PREPROCESSOR_DEFINITIONS = "";
+				INFOPLIST_FILE = "CrossingBorders4k copy-Info.plist";
+				INSTALL_PATH = "$(HOME)/Applications";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_1)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_2)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_3)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_4)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_5)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_6)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_7)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_8)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_9)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_10)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_11)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_12)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_13)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_14)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_15)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_2)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_1)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_3)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_7)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_8)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_9)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_10)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_11)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_12)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_13)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_16)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_17)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_18)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_19)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_20)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_21)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_22)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_23)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_24)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_25)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_26)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_27)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_28)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_29)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_30)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_31)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_32)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_33)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_34)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_35)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_36)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_37)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_38)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_39)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_40)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_41)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_42)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_43)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_44)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_45)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_46)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_47)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_48)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_49)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_50)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_51)",
+					/Users/focus/Documents/Xcode/of_v0.8.0_osx_release/addons/ofxFTGL/libs/FTGL/lib/osx,
+				);
+				PRODUCT_NAME = OculusVideoPlayer;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1101,6 +1418,15 @@
 			buildConfigurations = (
 				E7012CFE18F34AD800A3F1EB /* Debug */,
 				E7012CFF18F34AD800A3F1EB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E74C0A9818F3B57C00061B6B /* Build configuration list for PBXNativeTarget "OculusVideoPlayer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E74C0A9918F3B57C00061B6B /* Debug */,
+				E74C0A9A18F3B57C00061B6B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
