@@ -9,7 +9,6 @@ By James George
 Designed in collaboration with Pomp & Clout for 
 Book Shade - Crossing Borders VR Edition https://vimeo.com/88360151
 
-**TO USE**
 Works great with spherical video shot with something like http://freedom360.us/ that has been distorted using [Equirectangular Projection](http://en.wikipedia.org/wiki/Equirectangular_projection)
 
 **TO USE**
@@ -18,11 +17,13 @@ Works great with spherical video shot with something like http://freedom360.us/ 
 
 1) Plug in the Rift.
 
-2) Turn on Mirroring
+2) In Sytem Preferences > Displays Turn on Mirroring.
 
-3) Drag & drop it onto the app window
+3) Run the app.
 
-4) Hit 'f' to go full screen
+4) Drag & drop a video onto the app window.
+
+5) Hit 'f' to go full screen.
 
 **TO BUILD FROM SOURCE**
 
@@ -34,9 +35,9 @@ Works great with spherical video shot with something like http://freedom360.us/ 
 
 4) Clone https://github.com/Flightphase/ofxFTGL/ into addons/
 
-4) Clone this repository into apps/myApps/
+5) Clone this repository into apps/myApps/
 
-5) Build and Run the OculusVideoPlayer target
+6) Build and Run the OculusVideoPlayer target
 
 App created with Oculus Video Player, ofxOculusRift and openFrameworks
 
