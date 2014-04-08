@@ -99,3 +99,15 @@ sharedData/ignored/*
 
 
 /SelfieCalibration/SelfieCalibration.xcodeproj/xcshareddata/xcschemes/mySketch Release.xcscheme
+
+/icon_setitoff/
+
+/icon_booka.iconset/
+
+/bin/CrossingBordersVR/
+
+/icon_riftplayer/
+
+*.dmg
+
+/bin/data/movies/

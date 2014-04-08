@@ -2,9 +2,12 @@
 
 #include "ofMain.h"
 #include "ofxOculusRift.h"
+#include "ofxFTGL.h"
+
 #ifdef TARGET_WIN32
 #include "ofDirectShowPlayer.h"
 #endif
+
 class testApp : public ofBaseApp
 {
   public:
@@ -30,15 +33,17 @@ class testApp : public ofBaseApp
 	
 	#ifdef TARGET_WIN32
 	ofDirectShowPlayer player;
-#else
+	#else
 	ofVideoPlayer player;
 	#endif
+	
+	void drawStringCentered(string string);
+	ofxFTGLFont font;
+	ofxFTGLFont fontSmall;
 	
 	ofTexture videoTexture;
 	ofMesh sphereMesh;
 
 	ofCamera cam;
-	bool showOverlay;
-	bool predictive;
     
 };

@@ -26,11 +26,47 @@
 		E4C2424810CC5A17004149E2 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4C2424510CC5A17004149E2 /* Cocoa.framework */; };
 		E4C2424910CC5A17004149E2 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4C2424610CC5A17004149E2 /* IOKit.framework */; };
 		E4EB6799138ADC1D00A09F29 /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBAB23BE13894E4700AA2426 /* GLUT.framework */; };
+		E7012CE218F34AD800A3F1EB /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4B69E1D0A3A1BDC003C02F2 /* main.cpp */; };
+		E7012CE318F34AD800A3F1EB /* testApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4B69E1E0A3A1BDC003C02F2 /* testApp.cpp */; };
+		E7012CE418F34AD800A3F1EB /* ofxOculusRift.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CBA82EC11736A31D004EFE06 /* ofxOculusRift.cpp */; };
+		E7012CE618F34AD800A3F1EB /* QTKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E70AB76918E221CC001E6A32 /* QTKit.framework */; };
+		E7012CE718F34AD800A3F1EB /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E70AB76718E22140001E6A32 /* Accelerate.framework */; };
+		E7012CE818F34AD800A3F1EB /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E70AB76518E2212C001E6A32 /* QuartzCore.framework */; };
+		E7012CE918F34AD800A3F1EB /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E70AB76318E22124001E6A32 /* CoreMedia.framework */; };
+		E7012CEA18F34AD800A3F1EB /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E70AB76118E2211F001E6A32 /* CoreVideo.framework */; };
+		E7012CEB18F34AD800A3F1EB /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBAB23BE13894E4700AA2426 /* GLUT.framework */; };
+		E7012CEC18F34AD800A3F1EB /* openFrameworksDebug.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E4328148138ABC890047C5CB /* openFrameworksDebug.a */; };
+		E7012CED18F34AD800A3F1EB /* AGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E45BE9710E8CC7DD009D7055 /* AGL.framework */; };
+		E7012CEE18F34AD800A3F1EB /* ApplicationServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E45BE9720E8CC7DD009D7055 /* ApplicationServices.framework */; };
+		E7012CEF18F34AD800A3F1EB /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E45BE9730E8CC7DD009D7055 /* AudioToolbox.framework */; };
+		E7012CF018F34AD800A3F1EB /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E45BE9740E8CC7DD009D7055 /* Carbon.framework */; };
+		E7012CF118F34AD800A3F1EB /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E45BE9750E8CC7DD009D7055 /* CoreAudio.framework */; };
+		E7012CF218F34AD800A3F1EB /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E45BE9760E8CC7DD009D7055 /* CoreFoundation.framework */; };
+		E7012CF318F34AD800A3F1EB /* CoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E45BE9770E8CC7DD009D7055 /* CoreServices.framework */; };
+		E7012CF418F34AD800A3F1EB /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E45BE9790E8CC7DD009D7055 /* OpenGL.framework */; };
+		E7012CF518F34AD800A3F1EB /* QuickTime.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E45BE97A0E8CC7DD009D7055 /* QuickTime.framework */; };
+		E7012CF618F34AD800A3F1EB /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4C2424410CC5A17004149E2 /* AppKit.framework */; };
+		E7012CF718F34AD800A3F1EB /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4C2424510CC5A17004149E2 /* Cocoa.framework */; };
+		E7012CF818F34AD800A3F1EB /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4C2424610CC5A17004149E2 /* IOKit.framework */; };
+		E7012CF918F34AD800A3F1EB /* CoreMIDI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 270A248C141220590073405C /* CoreMIDI.framework */; };
+		E7012CFC18F34AD800A3F1EB /* GLUT.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = BBAB23BE13894E4700AA2426 /* GLUT.framework */; };
+		E709DAB218F3602500E67AA9 /* HelveticaNeueBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E709DAAD18F3602500E67AA9 /* HelveticaNeueBold.ttf */; };
+		E709DAB418F3602500E67AA9 /* CrossingBorders_4k_h264 in Resources */ = {isa = PBXBuildFile; fileRef = E709DAB018F3602500E67AA9 /* CrossingBorders_4k_h264 */; };
+		E709DAB618F3606D00E67AA9 /* CrossingBorders_1080p_h264 in Resources */ = {isa = PBXBuildFile; fileRef = E709DAAF18F3602500E67AA9 /* CrossingBorders_1080p_h264 */; };
+		E709DAB718F3607000E67AA9 /* HelveticaNeueBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E709DAAD18F3602500E67AA9 /* HelveticaNeueBold.ttf */; };
+		E709DACF18F3741D00E67AA9 /* icon_booka.icns in Resources */ = {isa = PBXBuildFile; fileRef = E709DACE18F3741D00E67AA9 /* icon_booka.icns */; };
+		E709DAD018F3741D00E67AA9 /* icon_booka.icns in Resources */ = {isa = PBXBuildFile; fileRef = E709DACE18F3741D00E67AA9 /* icon_booka.icns */; };
 		E70AB76218E2211F001E6A32 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E70AB76118E2211F001E6A32 /* CoreVideo.framework */; };
 		E70AB76418E22124001E6A32 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E70AB76318E22124001E6A32 /* CoreMedia.framework */; };
 		E70AB76618E2212C001E6A32 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E70AB76518E2212C001E6A32 /* QuartzCore.framework */; };
 		E70AB76818E22140001E6A32 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E70AB76718E22140001E6A32 /* Accelerate.framework */; };
 		E70AB76A18E221CC001E6A32 /* QTKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E70AB76918E221CC001E6A32 /* QTKit.framework */; };
+		E75F62E018F3586300AADDD5 /* libftgl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E75F629918F3586200AADDD5 /* libftgl.a */; };
+		E75F62E118F3586300AADDD5 /* libftgl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E75F629918F3586200AADDD5 /* libftgl.a */; };
+		E75F62EB18F3586300AADDD5 /* ofxFTGLFont.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E75F62A318F3586200AADDD5 /* ofxFTGLFont.cpp */; };
+		E75F62EC18F3586300AADDD5 /* ofxFTGLFont.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E75F62A318F3586200AADDD5 /* ofxFTGLFont.cpp */; };
+		E75F62ED18F3586300AADDD5 /* ofxFTGLSimpleLayout.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E75F62A518F3586200AADDD5 /* ofxFTGLSimpleLayout.cpp */; };
+		E75F62EE18F3586300AADDD5 /* ofxFTGLSimpleLayout.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E75F62A518F3586200AADDD5 /* ofxFTGLSimpleLayout.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +84,13 @@
 			remoteGlobalIDString = E4B27C1410CBEB8E00536013;
 			remoteInfo = openFrameworks;
 		};
+		E7012CE018F34AD800A3F1EB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E4328143138ABC890047C5CB /* openFrameworksLib.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = E4B27C1410CBEB8E00536013;
+			remoteInfo = openFrameworks;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -58,6 +101,16 @@
 			dstSubfolderSpec = 10;
 			files = (
 				BBAB23CB13894F3D00AA2426 /* GLUT.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E7012CFB18F34AD800A3F1EB /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				E7012CFC18F34AD800A3F1EB /* GLUT.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,7 +131,7 @@
 		E45BE9770E8CC7DD009D7055 /* CoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreServices.framework; path = /System/Library/Frameworks/CoreServices.framework; sourceTree = "<absolute>"; };
 		E45BE9790E8CC7DD009D7055 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = /System/Library/Frameworks/OpenGL.framework; sourceTree = "<absolute>"; };
 		E45BE97A0E8CC7DD009D7055 /* QuickTime.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuickTime.framework; path = /System/Library/Frameworks/QuickTime.framework; sourceTree = "<absolute>"; };
-		E4B69B5B0A3A1756003C02F2 /* OculusVideoViewerDebug.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OculusVideoViewerDebug.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E4B69B5B0A3A1756003C02F2 /* CrossingBordersVRDebug.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CrossingBordersVRDebug.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4B69E1D0A3A1BDC003C02F2 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = src/main.cpp; sourceTree = SOURCE_ROOT; };
 		E4B69E1E0A3A1BDC003C02F2 /* testApp.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = testApp.cpp; path = src/testApp.cpp; sourceTree = SOURCE_ROOT; };
 		E4B69E1F0A3A1BDC003C02F2 /* testApp.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = testApp.h; path = src/testApp.h; sourceTree = SOURCE_ROOT; };
@@ -88,11 +141,46 @@
 		E4C2424610CC5A17004149E2 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = /System/Library/Frameworks/IOKit.framework; sourceTree = "<absolute>"; };
 		E4EB691F138AFCF100A09F29 /* CoreOF.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = CoreOF.xcconfig; path = ../../../libs/openFrameworksCompiled/project/osx/CoreOF.xcconfig; sourceTree = SOURCE_ROOT; };
 		E4EB6923138AFD0F00A09F29 /* Project.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Project.xcconfig; sourceTree = "<group>"; };
+		E7012D0018F34AD800A3F1EB /* CrossingBordersVR4kDebug.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CrossingBordersVR4kDebug.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E7012D0118F34AD800A3F1EB /* OculusVideoViewer copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "OculusVideoViewer copy-Info.plist"; path = "/Users/focus/Documents/Xcode/of_v0.8.0_osx_release/apps/myApps/OculusSphericalVideoViewer/OculusVideoViewer copy-Info.plist"; sourceTree = "<absolute>"; };
+		E709DAAD18F3602500E67AA9 /* HelveticaNeueBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = HelveticaNeueBold.ttf; sourceTree = "<group>"; };
+		E709DAAF18F3602500E67AA9 /* CrossingBorders_1080p_h264 */ = {isa = PBXFileReference; lastKnownFileType = file; path = CrossingBorders_1080p_h264; sourceTree = "<group>"; };
+		E709DAB018F3602500E67AA9 /* CrossingBorders_4k_h264 */ = {isa = PBXFileReference; lastKnownFileType = file; path = CrossingBorders_4k_h264; sourceTree = "<group>"; };
+		E709DACE18F3741D00E67AA9 /* icon_booka.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = icon_booka.icns; sourceTree = SOURCE_ROOT; };
 		E70AB76118E2211F001E6A32 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
 		E70AB76318E22124001E6A32 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
 		E70AB76518E2212C001E6A32 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		E70AB76718E22140001E6A32 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
 		E70AB76918E221CC001E6A32 /* QTKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QTKit.framework; path = System/Library/Frameworks/QTKit.framework; sourceTree = SDKROOT; };
+		E75F627C18F3586200AADDD5 /* FTBBox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTBBox.h; sourceTree = "<group>"; };
+		E75F627D18F3586200AADDD5 /* FTBitmapGlyph.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTBitmapGlyph.h; sourceTree = "<group>"; };
+		E75F627E18F3586200AADDD5 /* FTBuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTBuffer.h; sourceTree = "<group>"; };
+		E75F627F18F3586200AADDD5 /* FTBufferFont.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTBufferFont.h; sourceTree = "<group>"; };
+		E75F628018F3586200AADDD5 /* FTBufferGlyph.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTBufferGlyph.h; sourceTree = "<group>"; };
+		E75F628118F3586200AADDD5 /* FTExtrdGlyph.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTExtrdGlyph.h; sourceTree = "<group>"; };
+		E75F628218F3586200AADDD5 /* FTFont.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTFont.h; sourceTree = "<group>"; };
+		E75F628318F3586200AADDD5 /* ftgl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ftgl.h; sourceTree = "<group>"; };
+		E75F628418F3586200AADDD5 /* FTGLBitmapFont.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTGLBitmapFont.h; sourceTree = "<group>"; };
+		E75F628518F3586200AADDD5 /* FTGLExtrdFont.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTGLExtrdFont.h; sourceTree = "<group>"; };
+		E75F628618F3586200AADDD5 /* FTGLOutlineFont.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTGLOutlineFont.h; sourceTree = "<group>"; };
+		E75F628718F3586200AADDD5 /* FTGLPixmapFont.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTGLPixmapFont.h; sourceTree = "<group>"; };
+		E75F628818F3586200AADDD5 /* FTGLPolygonFont.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTGLPolygonFont.h; sourceTree = "<group>"; };
+		E75F628918F3586200AADDD5 /* FTGLTextureFont.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTGLTextureFont.h; sourceTree = "<group>"; };
+		E75F628A18F3586200AADDD5 /* FTGlyph.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTGlyph.h; sourceTree = "<group>"; };
+		E75F628B18F3586200AADDD5 /* FTLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTLayout.h; sourceTree = "<group>"; };
+		E75F628C18F3586200AADDD5 /* FTOutlineGlyph.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTOutlineGlyph.h; sourceTree = "<group>"; };
+		E75F628D18F3586200AADDD5 /* FTPixmapGlyph.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTPixmapGlyph.h; sourceTree = "<group>"; };
+		E75F628E18F3586200AADDD5 /* FTPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTPoint.h; sourceTree = "<group>"; };
+		E75F628F18F3586200AADDD5 /* FTPolyGlyph.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTPolyGlyph.h; sourceTree = "<group>"; };
+		E75F629018F3586200AADDD5 /* FTSimpleLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTSimpleLayout.h; sourceTree = "<group>"; };
+		E75F629118F3586200AADDD5 /* FTTextureGlyph.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTTextureGlyph.h; sourceTree = "<group>"; };
+		E75F629818F3586200AADDD5 /* buildFTGL.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = buildFTGL.sh; sourceTree = "<group>"; };
+		E75F629918F3586200AADDD5 /* libftgl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libftgl.a; sourceTree = "<group>"; };
+		E75F62A218F3586200AADDD5 /* ofxFTGL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxFTGL.h; sourceTree = "<group>"; };
+		E75F62A318F3586200AADDD5 /* ofxFTGLFont.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ofxFTGLFont.cpp; sourceTree = "<group>"; };
+		E75F62A418F3586200AADDD5 /* ofxFTGLFont.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxFTGLFont.h; sourceTree = "<group>"; };
+		E75F62A518F3586200AADDD5 /* ofxFTGLSimpleLayout.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ofxFTGLSimpleLayout.cpp; sourceTree = "<group>"; };
+		E75F62A618F3586200AADDD5 /* ofxFTGLSimpleLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxFTGLSimpleLayout.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +194,7 @@
 				E70AB76418E22124001E6A32 /* CoreMedia.framework in Frameworks */,
 				E70AB76218E2211F001E6A32 /* CoreVideo.framework in Frameworks */,
 				E4EB6799138ADC1D00A09F29 /* GLUT.framework in Frameworks */,
+				E75F62E018F3586300AADDD5 /* libftgl.a in Frameworks */,
 				E4328149138ABC9F0047C5CB /* openFrameworksDebug.a in Frameworks */,
 				E45BE97B0E8CC7DD009D7055 /* AGL.framework in Frameworks */,
 				E45BE97C0E8CC7DD009D7055 /* ApplicationServices.framework in Frameworks */,
@@ -123,12 +212,41 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E7012CE518F34AD800A3F1EB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E7012CE618F34AD800A3F1EB /* QTKit.framework in Frameworks */,
+				E7012CE718F34AD800A3F1EB /* Accelerate.framework in Frameworks */,
+				E7012CE818F34AD800A3F1EB /* QuartzCore.framework in Frameworks */,
+				E7012CE918F34AD800A3F1EB /* CoreMedia.framework in Frameworks */,
+				E7012CEA18F34AD800A3F1EB /* CoreVideo.framework in Frameworks */,
+				E7012CEB18F34AD800A3F1EB /* GLUT.framework in Frameworks */,
+				E75F62E118F3586300AADDD5 /* libftgl.a in Frameworks */,
+				E7012CEC18F34AD800A3F1EB /* openFrameworksDebug.a in Frameworks */,
+				E7012CED18F34AD800A3F1EB /* AGL.framework in Frameworks */,
+				E7012CEE18F34AD800A3F1EB /* ApplicationServices.framework in Frameworks */,
+				E7012CEF18F34AD800A3F1EB /* AudioToolbox.framework in Frameworks */,
+				E7012CF018F34AD800A3F1EB /* Carbon.framework in Frameworks */,
+				E7012CF118F34AD800A3F1EB /* CoreAudio.framework in Frameworks */,
+				E7012CF218F34AD800A3F1EB /* CoreFoundation.framework in Frameworks */,
+				E7012CF318F34AD800A3F1EB /* CoreServices.framework in Frameworks */,
+				E7012CF418F34AD800A3F1EB /* OpenGL.framework in Frameworks */,
+				E7012CF518F34AD800A3F1EB /* QuickTime.framework in Frameworks */,
+				E7012CF618F34AD800A3F1EB /* AppKit.framework in Frameworks */,
+				E7012CF718F34AD800A3F1EB /* Cocoa.framework in Frameworks */,
+				E7012CF818F34AD800A3F1EB /* IOKit.framework in Frameworks */,
+				E7012CF918F34AD800A3F1EB /* CoreMIDI.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		BB4B014C10F69532006C3DED /* addons */ = {
 			isa = PBXGroup;
 			children = (
+				E75F622B18F3585F00AADDD5 /* ofxFTGL */,
 				CBA82EC41736A327004EFE06 /* ofxOculusRift */,
 			);
 			name = addons;
@@ -137,6 +255,11 @@
 		BBAB23C913894ECA00AA2426 /* system frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E70AB76918E221CC001E6A32 /* QTKit.framework */,
+				E70AB76718E22140001E6A32 /* Accelerate.framework */,
+				E70AB76518E2212C001E6A32 /* QuartzCore.framework */,
+				E70AB76318E22124001E6A32 /* CoreMedia.framework */,
+				E70AB76118E2211F001E6A32 /* CoreVideo.framework */,
 				E4C2424410CC5A17004149E2 /* AppKit.framework */,
 				E4C2424510CC5A17004149E2 /* Cocoa.framework */,
 				E4C2424610CC5A17004149E2 /* IOKit.framework */,
@@ -200,17 +323,15 @@
 		E4B69B4A0A3A1720003C02F2 = {
 			isa = PBXGroup;
 			children = (
-				E70AB76918E221CC001E6A32 /* QTKit.framework */,
-				E70AB76718E22140001E6A32 /* Accelerate.framework */,
-				E70AB76518E2212C001E6A32 /* QuartzCore.framework */,
-				E70AB76318E22124001E6A32 /* CoreMedia.framework */,
-				E70AB76118E2211F001E6A32 /* CoreVideo.framework */,
+				E709DAAA18F3602500E67AA9 /* data */,
 				E4EB6923138AFD0F00A09F29 /* Project.xcconfig */,
 				E4B69E1C0A3A1BDC003C02F2 /* src */,
 				E4EEC9E9138DF44700A80321 /* openFrameworks */,
 				BB4B014C10F69532006C3DED /* addons */,
 				E45BE5980E8CC70C009D7055 /* frameworks */,
-				E4B69B5B0A3A1756003C02F2 /* OculusVideoViewerDebug.app */,
+				E4B69B5B0A3A1756003C02F2 /* CrossingBordersVRDebug.app */,
+				E7012D0018F34AD800A3F1EB /* CrossingBordersVR4kDebug.app */,
+				E7012D0118F34AD800A3F1EB /* OculusVideoViewer copy-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -234,26 +355,168 @@
 			name = openFrameworks;
 			sourceTree = "<group>";
 		};
+		E709DAAA18F3602500E67AA9 /* data */ = {
+			isa = PBXGroup;
+			children = (
+				E709DACE18F3741D00E67AA9 /* icon_booka.icns */,
+				E709DAAC18F3602500E67AA9 /* font */,
+				E709DAAE18F3602500E67AA9 /* movies */,
+			);
+			name = data;
+			path = bin/data;
+			sourceTree = "<group>";
+		};
+		E709DAAC18F3602500E67AA9 /* font */ = {
+			isa = PBXGroup;
+			children = (
+				E709DAAD18F3602500E67AA9 /* HelveticaNeueBold.ttf */,
+			);
+			path = font;
+			sourceTree = "<group>";
+		};
+		E709DAAE18F3602500E67AA9 /* movies */ = {
+			isa = PBXGroup;
+			children = (
+				E709DAAF18F3602500E67AA9 /* CrossingBorders_1080p_h264 */,
+				E709DAB018F3602500E67AA9 /* CrossingBorders_4k_h264 */,
+			);
+			path = movies;
+			sourceTree = "<group>";
+		};
+		E75F622B18F3585F00AADDD5 /* ofxFTGL */ = {
+			isa = PBXGroup;
+			children = (
+				E75F627818F3586200AADDD5 /* libs */,
+				E75F62A118F3586200AADDD5 /* src */,
+			);
+			name = ofxFTGL;
+			path = ../../../addons/ofxFTGL;
+			sourceTree = "<group>";
+		};
+		E75F627818F3586200AADDD5 /* libs */ = {
+			isa = PBXGroup;
+			children = (
+				E75F627918F3586200AADDD5 /* FTGL */,
+			);
+			path = libs;
+			sourceTree = "<group>";
+		};
+		E75F627918F3586200AADDD5 /* FTGL */ = {
+			isa = PBXGroup;
+			children = (
+				E75F627A18F3586200AADDD5 /* include */,
+				E75F629218F3586200AADDD5 /* lib */,
+			);
+			path = FTGL;
+			sourceTree = "<group>";
+		};
+		E75F627A18F3586200AADDD5 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				E75F627B18F3586200AADDD5 /* FTGL */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		E75F627B18F3586200AADDD5 /* FTGL */ = {
+			isa = PBXGroup;
+			children = (
+				E75F627C18F3586200AADDD5 /* FTBBox.h */,
+				E75F627D18F3586200AADDD5 /* FTBitmapGlyph.h */,
+				E75F627E18F3586200AADDD5 /* FTBuffer.h */,
+				E75F627F18F3586200AADDD5 /* FTBufferFont.h */,
+				E75F628018F3586200AADDD5 /* FTBufferGlyph.h */,
+				E75F628118F3586200AADDD5 /* FTExtrdGlyph.h */,
+				E75F628218F3586200AADDD5 /* FTFont.h */,
+				E75F628318F3586200AADDD5 /* ftgl.h */,
+				E75F628418F3586200AADDD5 /* FTGLBitmapFont.h */,
+				E75F628518F3586200AADDD5 /* FTGLExtrdFont.h */,
+				E75F628618F3586200AADDD5 /* FTGLOutlineFont.h */,
+				E75F628718F3586200AADDD5 /* FTGLPixmapFont.h */,
+				E75F628818F3586200AADDD5 /* FTGLPolygonFont.h */,
+				E75F628918F3586200AADDD5 /* FTGLTextureFont.h */,
+				E75F628A18F3586200AADDD5 /* FTGlyph.h */,
+				E75F628B18F3586200AADDD5 /* FTLayout.h */,
+				E75F628C18F3586200AADDD5 /* FTOutlineGlyph.h */,
+				E75F628D18F3586200AADDD5 /* FTPixmapGlyph.h */,
+				E75F628E18F3586200AADDD5 /* FTPoint.h */,
+				E75F628F18F3586200AADDD5 /* FTPolyGlyph.h */,
+				E75F629018F3586200AADDD5 /* FTSimpleLayout.h */,
+				E75F629118F3586200AADDD5 /* FTTextureGlyph.h */,
+			);
+			path = FTGL;
+			sourceTree = "<group>";
+		};
+		E75F629218F3586200AADDD5 /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				E75F629718F3586200AADDD5 /* osx */,
+			);
+			path = lib;
+			sourceTree = "<group>";
+		};
+		E75F629718F3586200AADDD5 /* osx */ = {
+			isa = PBXGroup;
+			children = (
+				E75F629818F3586200AADDD5 /* buildFTGL.sh */,
+				E75F629918F3586200AADDD5 /* libftgl.a */,
+			);
+			path = osx;
+			sourceTree = "<group>";
+		};
+		E75F62A118F3586200AADDD5 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				E75F62A218F3586200AADDD5 /* ofxFTGL.h */,
+				E75F62A318F3586200AADDD5 /* ofxFTGLFont.cpp */,
+				E75F62A418F3586200AADDD5 /* ofxFTGLFont.h */,
+				E75F62A518F3586200AADDD5 /* ofxFTGLSimpleLayout.cpp */,
+				E75F62A618F3586200AADDD5 /* ofxFTGLSimpleLayout.h */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		E4B69B5A0A3A1756003C02F2 /* OculusVideoViewer */ = {
+		E4B69B5A0A3A1756003C02F2 /* CrossigBorders */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E4B69B5F0A3A1757003C02F2 /* Build configuration list for PBXNativeTarget "OculusVideoViewer" */;
+			buildConfigurationList = E4B69B5F0A3A1757003C02F2 /* Build configuration list for PBXNativeTarget "CrossigBorders" */;
 			buildPhases = (
 				E4B69B580A3A1756003C02F2 /* Sources */,
 				E4B69B590A3A1756003C02F2 /* Frameworks */,
 				E4B6FFFD0C3F9AB9008CF71C /* ShellScript */,
 				E4C2427710CC5ABF004149E2 /* CopyFiles */,
+				E709DAB518F3606900E67AA9 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 				E4EEB9AC138B136A00A80321 /* PBXTargetDependency */,
 			);
-			name = OculusVideoViewer;
+			name = CrossigBorders;
 			productName = myOFApp;
-			productReference = E4B69B5B0A3A1756003C02F2 /* OculusVideoViewerDebug.app */;
+			productReference = E4B69B5B0A3A1756003C02F2 /* CrossingBordersVRDebug.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E7012CDE18F34AD800A3F1EB /* CrossingBorders4k */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E7012CFD18F34AD800A3F1EB /* Build configuration list for PBXNativeTarget "CrossingBorders4k" */;
+			buildPhases = (
+				E7012CE118F34AD800A3F1EB /* Sources */,
+				E7012CE518F34AD800A3F1EB /* Frameworks */,
+				E7012CFA18F34AD800A3F1EB /* ShellScript */,
+				E7012CFB18F34AD800A3F1EB /* CopyFiles */,
+				E7012D0318F34E6800A3F1EB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E7012CDF18F34AD800A3F1EB /* PBXTargetDependency */,
+			);
+			name = CrossingBorders4k;
+			productName = myOFApp;
+			productReference = E7012D0018F34AD800A3F1EB /* CrossingBordersVR4kDebug.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -285,7 +548,8 @@
 			);
 			projectRoot = "";
 			targets = (
-				E4B69B5A0A3A1756003C02F2 /* OculusVideoViewer */,
+				E4B69B5A0A3A1756003C02F2 /* CrossigBorders */,
+				E7012CDE18F34AD800A3F1EB /* CrossingBorders4k */,
 			);
 		};
 /* End PBXProject section */
@@ -300,8 +564,44 @@
 		};
 /* End PBXReferenceProxy section */
 
+/* Begin PBXResourcesBuildPhase section */
+		E7012D0318F34E6800A3F1EB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E709DAD018F3741D00E67AA9 /* icon_booka.icns in Resources */,
+				E709DAB218F3602500E67AA9 /* HelveticaNeueBold.ttf in Resources */,
+				E709DAB418F3602500E67AA9 /* CrossingBorders_4k_h264 in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E709DAB518F3606900E67AA9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E709DACF18F3741D00E67AA9 /* icon_booka.icns in Resources */,
+				E709DAB618F3606D00E67AA9 /* CrossingBorders_1080p_h264 in Resources */,
+				E709DAB718F3607000E67AA9 /* HelveticaNeueBold.ttf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
 /* Begin PBXShellScriptBuildPhase section */
 		E4B6FFFD0C3F9AB9008CF71C /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "cp -f ../../../libs/fmodex/lib/osx/libfmodex.dylib \"$TARGET_BUILD_DIR/$PRODUCT_NAME.app/Contents/MacOS/libfmodex.dylib\"; install_name_tool -change ./libfmodex.dylib @executable_path/libfmodex.dylib \"$TARGET_BUILD_DIR/$PRODUCT_NAME.app/Contents/MacOS/$PRODUCT_NAME\";";
+		};
+		E7012CFA18F34AD800A3F1EB /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -321,9 +621,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E75F62ED18F3586300AADDD5 /* ofxFTGLSimpleLayout.cpp in Sources */,
+				E75F62EB18F3586300AADDD5 /* ofxFTGLFont.cpp in Sources */,
 				E4B69E200A3A1BDC003C02F2 /* main.cpp in Sources */,
 				E4B69E210A3A1BDC003C02F2 /* testApp.cpp in Sources */,
 				CBA82EC31736A31D004EFE06 /* ofxOculusRift.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E7012CE118F34AD800A3F1EB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E75F62EE18F3586300AADDD5 /* ofxFTGLSimpleLayout.cpp in Sources */,
+				E75F62EC18F3586300AADDD5 /* ofxFTGLFont.cpp in Sources */,
+				E7012CE218F34AD800A3F1EB /* main.cpp in Sources */,
+				E7012CE318F34AD800A3F1EB /* testApp.cpp in Sources */,
+				E7012CE418F34AD800A3F1EB /* ofxOculusRift.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -334,6 +648,11 @@
 			isa = PBXTargetDependency;
 			name = openFrameworks;
 			targetProxy = E4EEB9AB138B136A00A80321 /* PBXContainerItemProxy */;
+		};
+		E7012CDF18F34AD800A3F1EB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = openFrameworks;
+			targetProxy = E7012CE018F34AD800A3F1EB /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -359,6 +678,12 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = NO;
 				GCC_WARN_UNUSED_VALUE = NO;
 				GCC_WARN_UNUSED_VARIABLE = NO;
+				HEADER_SEARCH_PATHS = (
+					"$(OF_CORE_HEADERS)",
+					"$(OF_ADDON_HEADERS)",
+					"$(OF_PATH)/addons/ofxFTGL/libs/FTGL/include",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				OTHER_CPLUSPLUSFLAGS = (
 					"-D__MACOSX_CORE__",
 					"-lpthread",
@@ -390,6 +715,12 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = NO;
 				GCC_WARN_UNUSED_VALUE = NO;
 				GCC_WARN_UNUSED_VARIABLE = NO;
+				HEADER_SEARCH_PATHS = (
+					"$(OF_CORE_HEADERS)",
+					"$(OF_ADDON_HEADERS)",
+					"$(OF_PATH)/addons/ofxFTGL/libs/FTGL/include",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				OTHER_CPLUSPLUSFLAGS = (
 					"-D__MACOSX_CORE__",
 					"-lpthread",
@@ -412,6 +743,7 @@
 				GCC_MODEL_TUNING = G4;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/Carbon.framework/Headers/Carbon.h";
+				GCC_PREPROCESSOR_DEFINITIONS = "VIDEO_FILE_NAME=CrossingBorders_1080p_h264";
 				INFOPLIST_FILE = "openFrameworks-Info.plist";
 				INSTALL_PATH = "$(HOME)/Applications";
 				LIBRARY_SEARCH_PATHS = (
@@ -477,8 +809,9 @@
 					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_50)",
 					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_51)",
 					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_52)",
+					/Users/focus/Documents/Xcode/of_v0.8.0_osx_release/addons/ofxFTGL/libs/FTGL/lib/osx,
 				);
-				PRODUCT_NAME = OculusVideoViewerDebug;
+				PRODUCT_NAME = CrossingBordersVRDebug;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -496,6 +829,7 @@
 				GCC_MODEL_TUNING = G4;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/Carbon.framework/Headers/Carbon.h";
+				GCC_PREPROCESSOR_DEFINITIONS = "VIDEO_FILE_NAME=CrossingBorders_1080p_h264";
 				INFOPLIST_FILE = "openFrameworks-Info.plist";
 				INSTALL_PATH = "$(HOME)/Applications";
 				LIBRARY_SEARCH_PATHS = (
@@ -561,8 +895,182 @@
 					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_49)",
 					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_50)",
 					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_51)",
+					/Users/focus/Documents/Xcode/of_v0.8.0_osx_release/addons/ofxFTGL/libs/FTGL/lib/osx,
 				);
-				PRODUCT_NAME = OculusVideoViewer;
+				PRODUCT_NAME = CrossingBordersVR;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		E7012CFE18F34AD800A3F1EB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1)",
+				);
+				FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1 = "\"$(SRCROOT)/../../../libs/glut/lib/osx\"";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_MODEL_TUNING = G4;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/Carbon.framework/Headers/Carbon.h";
+				GCC_PREPROCESSOR_DEFINITIONS = "VIDEO_FILE_NAME=CrossingBorders_4k_h264";
+				INFOPLIST_FILE = "OculusVideoViewer copy-Info.plist";
+				INSTALL_PATH = "$(HOME)/Applications";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_1)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_2)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_3)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_4)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_5)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_6)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_7)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_8)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_9)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_10)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_11)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_12)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_13)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_14)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_15)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_2)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_3)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_7)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_8)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_9)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_10)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_11)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_12)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_13)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_16)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_17)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_18)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_19)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_20)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_21)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_22)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_23)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_24)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_25)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_26)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_27)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_28)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_29)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_30)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_31)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_32)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_33)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_34)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_35)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_36)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_37)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_38)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_39)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_40)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_41)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_42)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_43)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_44)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_45)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_46)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_47)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_48)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_49)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_50)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_51)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_52)",
+					/Users/focus/Documents/Xcode/of_v0.8.0_osx_release/addons/ofxFTGL/libs/FTGL/lib/osx,
+				);
+				PRODUCT_NAME = CrossingBordersVR4kDebug;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		E7012CFF18F34AD800A3F1EB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1)",
+				);
+				FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1 = "\"$(SRCROOT)/../../../libs/glut/lib/osx\"";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G4;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/Carbon.framework/Headers/Carbon.h";
+				GCC_PREPROCESSOR_DEFINITIONS = "VIDEO_FILE_NAME=CrossingBorders_4k_h264";
+				INFOPLIST_FILE = "OculusVideoViewer copy-Info.plist";
+				INSTALL_PATH = "$(HOME)/Applications";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_1)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_2)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_3)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_4)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_5)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_6)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_7)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_8)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_9)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_10)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_11)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_12)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_13)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_14)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_15)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_2)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_1)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_3)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_7)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_8)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_9)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_10)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_11)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_12)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_13)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_16)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_17)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_18)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_19)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_20)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_21)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_22)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_23)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_24)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_25)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_26)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_27)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_28)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_29)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_30)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_31)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_32)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_33)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_34)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_35)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_36)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_37)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_38)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_39)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_40)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_41)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_42)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_43)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_44)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_45)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_46)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_47)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_48)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_49)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_50)",
+					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_51)",
+					/Users/focus/Documents/Xcode/of_v0.8.0_osx_release/addons/ofxFTGL/libs/FTGL/lib/osx,
+				);
+				PRODUCT_NAME = CrossingBordersVR4k;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -579,11 +1087,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E4B69B5F0A3A1757003C02F2 /* Build configuration list for PBXNativeTarget "OculusVideoViewer" */ = {
+		E4B69B5F0A3A1757003C02F2 /* Build configuration list for PBXNativeTarget "CrossigBorders" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E4B69B600A3A1757003C02F2 /* Debug */,
 				E4B69B610A3A1757003C02F2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E7012CFD18F34AD800A3F1EB /* Build configuration list for PBXNativeTarget "CrossingBorders4k" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E7012CFE18F34AD800A3F1EB /* Debug */,
+				E7012CFF18F34AD800A3F1EB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

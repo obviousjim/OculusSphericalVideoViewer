@@ -1,43 +1,66 @@
 #include "testApp.h"
 
+#define STRINGIZE2(s) #s
+#define STRINGIZE(s) STRINGIZE2(s)
+
 //--------------------------------------------------------------
-void testApp::setup()
-{
+void testApp::setup() {
+	
 	ofBackground(0);
-	ofSetLogLevel( OF_LOG_VERBOSE );
 	ofSetVerticalSync(true);
 
-	showOverlay = false;
-	predictive = true;
+	//look in the bundle!
+	#if defined(VIDEO_FILE_NAME) && defined(TARGET_OSX)
+	ofDisableDataPath();
+    CFBundleRef mainBundle = CFBundleGetMainBundle();
+    CFURLRef resourcesURL = CFBundleCopyResourcesDirectoryURL(mainBundle);
+    char path[PATH_MAX];
+    CFURLGetFileSystemRepresentation(resourcesURL, TRUE, (UInt8 *)path, PATH_MAX);
+    CFRelease(resourcesURL);
+    chdir(path);
+	#endif
 	
-//	ofHideCursor();
+	#ifndef TARGET_WIN32
+	player.setUseTexture(false);
+	#endif
+
+	font.loadFont("HelveticaNeueBold.ttf", 28);
+	fontSmall.loadFont("HelveticaNeueBold.ttf", 10);
 	
 	oculusRift.baseCamera = &cam;
 	oculusRift.setup();
 	
-	//enable mouse;
-	cam.begin();
-	cam.end();
-	cam.setPosition(0,0,0);
-
-
-	#ifndef TARGET_WIN32
-	player.setUseTexture(false);
-	#endif
-	//put video path here:
+	if(oculusRift.isSetup()){
+		
+		//enable mouse;
+		cam.begin();
+		cam.end();
+		cam.setPosition(0,0,0);
+		
+		//if this is set then the app looks for a video right away
+		#ifdef VIDEO_FILE_NAME
+		player.loadMovie(STRINGIZE(VIDEO_FILE_NAME));
+		player.play();
+		#endif
+		
+		ofToggleFullscreen();
+	}
 	
 }
-
 
 //--------------------------------------------------------------
 void testApp::update()
 {
+	if(!oculusRift.isSetup()){
+		return;
+	}
+	
 	player.update();
 	if(player.isFrameNew()){
 		
 		if(!videoTexture.isAllocated() ||
 		   videoTexture.getWidth() != player.getWidth() ||
-		   videoTexture.getHeight() !=player.getHeight())
+		   videoTexture.getHeight() != player.getHeight())
 		{
 			ofSpherePrimitive p = ofSpherePrimitive(100.0,20);
 			sphereMesh = p.getMesh();
@@ -45,6 +68,7 @@ void testApp::update()
 			for(int i = 0; i < sphereMesh.getNumVertices(); i++){
 				sphereMesh.setTexCoord(i,sphereMesh.getTexCoord(i) * ofVec2f(player.getWidth(),player.getHeight()));
 			}
+			
 			videoTexture.allocate(player.getWidth(),player.getHeight(), GL_RGB);
 		}
 
@@ -56,13 +80,12 @@ void testApp::update()
 void testApp::draw()
 {
 
-	
 	if(oculusRift.isSetup()){
-
 
         ofSetColor(255);
 
 		glEnable(GL_DEPTH_TEST);
+		
 		oculusRift.beginLeftEye();
 		drawScene();
 		oculusRift.endLeftEye();
@@ -74,15 +97,28 @@ void testApp::draw()
 		oculusRift.draw();
 		
 		glDisable(GL_DEPTH_TEST);
+		
+		ofPushStyle();
+		string instructions = "'f' toggle full screen";
+		int width = fontSmall.stringWidth(instructions);
+		ofSetColor(255*.4);
+		fontSmall.drawString(instructions,oculusRift.getOculusViewport().getWidth() - width/2, 40);
+		ofPopStyle();
     }
 	else{
-		cam.begin();
-		drawScene();
-		cam.end();
+		ofPushStyle();
+		ofSetColor(255*.4);
+		drawStringCentered("Rift not found! Plug it in and restart the app.");
+		ofPopStyle();
 	}
 
-//	videoTexture.draw(0,0);
-	
+}
+
+//--------------------------------------------------------------
+void testApp::drawStringCentered(string str){
+	int width = font.stringWidth(str);
+	int height = font.stringHeight(str);
+	font.drawString(str, ofGetWidth()/2 - width/2, ofGetHeight()/2 - height/2);
 }
 
 //--------------------------------------------------------------
@@ -95,49 +131,21 @@ void testApp::drawScene()
 	sphereMesh.draw();
 	videoTexture.unbind();
 	
-	ofDisableDepthTest();
-	sphereMesh.drawWireframe();
-	ofEnableDepthTest();
+//	ofDisableDepthTest();
+//	sphereMesh.drawWireframe();
+//	ofEnableDepthTest();
 	
 	ofPopStyle();
-    
 }
 
 //--------------------------------------------------------------
 void testApp::keyPressed(int key)
 {
-	if( key == 'f' )
-	{
+	if( key == 'f' ){
 		//gotta toggle full screen for it to be right
 		ofToggleFullscreen();
 	}
-	
-	if(key == 's'){
-		oculusRift.reloadShader();
-	}
-	
-	if(key == 'l'){
-		oculusRift.lockView = !oculusRift.lockView;
-	}
-	
-	if(key == 'o'){
-		showOverlay = !showOverlay;
-	}
-	if(key == 'r'){
-		oculusRift.reset();
-		
-	}
-	if(key == 'h'){
-		ofHideCursor();
-	}
-	if(key == 'H'){
-		ofShowCursor();
-	}
-	
-	if(key == 'p'){
-		predictive = !predictive;
-		oculusRift.setUsePredictedOrientation(predictive);
-	}
+
 }
 
 //--------------------------------------------------------------
@@ -182,7 +190,10 @@ void testApp::gotMessage(ofMessage msg)
 //--------------------------------------------------------------
 void testApp::dragEvent(ofDragInfo dragInfo)
 {
+	//this is for the standalone player
+	#ifndef VIDEO_FILE_NAME
 	player.loadMovie( dragInfo.files[0] );
 	player.play();
-
+	#endif
+	
 }
