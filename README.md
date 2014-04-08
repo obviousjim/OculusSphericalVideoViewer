@@ -7,7 +7,7 @@ By James George
 @obviousjim | http://jamesgeorge.org | http://github.com/obviousjim
 
 Designed in collaboration with Pomp & Clout for 
-Book Shade - Crossing Borders VR Edition https://vimeo.com/88360151
+Booka Shade - Crossing Borders VR Edition https://vimeo.com/88360151
 
 Works great with spherical video shot with something like http://freedom360.us/ that has been distorted using [Equirectangular Projection](http://en.wikipedia.org/wiki/Equirectangular_projection)
 
