@@ -1,12 +1,11 @@
-
-*Oculus Spherical Video Player*
+***Oculus Spherical Video Player***
 
 ![Video](https://raw.githubusercontent.com/obviousjim/OculusSphericalVideoViewer/master/OculusVideoPlayer.png)
 
-By James George 
-@obviousjim | http://jamesgeorge.org | http://github.com/obviousjim
+By [James George](http://jamesgeorge.org)
+[@obviousjim](https://twitter.com/obviousjim) | http://jamesgeorge.org
 
-Designed in collaboration with Pomp & Clout for 
+Designed in collaboration with [Pomp &amp; Clout](pompandclout.com) for 
 Booka Shade - Crossing Borders VR Edition https://vimeo.com/88360151
 
 Works great with spherical video shot with something like http://freedom360.us/ that has been distorted using [Equirectangular Projection](http://en.wikipedia.org/wiki/Equirectangular_projection)
