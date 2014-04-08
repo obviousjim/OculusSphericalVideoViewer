@@ -1,4 +1,4 @@
-# Oculus Spherical Video Playe
+# Oculus Spherical Video Player
 
 ![Video](https://raw.githubusercontent.com/obviousjim/OculusSphericalVideoViewer/master/OculusVideoPlayer.png)
 
