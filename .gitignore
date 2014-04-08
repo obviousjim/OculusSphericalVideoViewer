@@ -111,3 +111,7 @@ sharedData/ignored/*
 *.dmg
 
 /bin/data/movies/
+
+/bin/OulusVideoPlayer/
+
+/icon_riftplayer.iconset/
