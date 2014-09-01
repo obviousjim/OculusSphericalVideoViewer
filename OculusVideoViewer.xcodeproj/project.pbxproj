@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		270A248D141220590073405C /* CoreMIDI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 270A248C141220590073405C /* CoreMIDI.framework */; };
 		BBAB23CB13894F3D00AA2426 /* GLUT.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = BBAB23BE13894E4700AA2426 /* GLUT.framework */; };
-		CBA82EC31736A31D004EFE06 /* ofxOculusRift.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CBA82EC11736A31D004EFE06 /* ofxOculusRift.cpp */; };
 		E4328149138ABC9F0047C5CB /* openFrameworksDebug.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E4328148138ABC890047C5CB /* openFrameworksDebug.a */; };
 		E45BE97B0E8CC7DD009D7055 /* AGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E45BE9710E8CC7DD009D7055 /* AGL.framework */; };
 		E45BE97C0E8CC7DD009D7055 /* ApplicationServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E45BE9720E8CC7DD009D7055 /* ApplicationServices.framework */; };
@@ -28,7 +27,6 @@
 		E4EB6799138ADC1D00A09F29 /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBAB23BE13894E4700AA2426 /* GLUT.framework */; };
 		E7012CE218F34AD800A3F1EB /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4B69E1D0A3A1BDC003C02F2 /* main.cpp */; };
 		E7012CE318F34AD800A3F1EB /* testApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4B69E1E0A3A1BDC003C02F2 /* testApp.cpp */; };
-		E7012CE418F34AD800A3F1EB /* ofxOculusRift.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CBA82EC11736A31D004EFE06 /* ofxOculusRift.cpp */; };
 		E7012CE618F34AD800A3F1EB /* QTKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E70AB76918E221CC001E6A32 /* QTKit.framework */; };
 		E7012CE718F34AD800A3F1EB /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E70AB76718E22140001E6A32 /* Accelerate.framework */; };
 		E7012CE818F34AD800A3F1EB /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E70AB76518E2212C001E6A32 /* QuartzCore.framework */; };
@@ -61,18 +59,14 @@
 		E70AB76618E2212C001E6A32 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E70AB76518E2212C001E6A32 /* QuartzCore.framework */; };
 		E70AB76818E22140001E6A32 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E70AB76718E22140001E6A32 /* Accelerate.framework */; };
 		E70AB76A18E221CC001E6A32 /* QTKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E70AB76918E221CC001E6A32 /* QTKit.framework */; };
-		E74C0A7618F3B57C00061B6B /* ofxFTGLSimpleLayout.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E75F62A518F3586200AADDD5 /* ofxFTGLSimpleLayout.cpp */; };
-		E74C0A7718F3B57C00061B6B /* ofxFTGLFont.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E75F62A318F3586200AADDD5 /* ofxFTGLFont.cpp */; };
 		E74C0A7818F3B57C00061B6B /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4B69E1D0A3A1BDC003C02F2 /* main.cpp */; };
 		E74C0A7918F3B57C00061B6B /* testApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4B69E1E0A3A1BDC003C02F2 /* testApp.cpp */; };
-		E74C0A7A18F3B57C00061B6B /* ofxOculusRift.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CBA82EC11736A31D004EFE06 /* ofxOculusRift.cpp */; };
 		E74C0A7C18F3B57C00061B6B /* QTKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E70AB76918E221CC001E6A32 /* QTKit.framework */; };
 		E74C0A7D18F3B57C00061B6B /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E70AB76718E22140001E6A32 /* Accelerate.framework */; };
 		E74C0A7E18F3B57C00061B6B /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E70AB76518E2212C001E6A32 /* QuartzCore.framework */; };
 		E74C0A7F18F3B57C00061B6B /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E70AB76318E22124001E6A32 /* CoreMedia.framework */; };
 		E74C0A8018F3B57C00061B6B /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E70AB76118E2211F001E6A32 /* CoreVideo.framework */; };
 		E74C0A8118F3B57C00061B6B /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBAB23BE13894E4700AA2426 /* GLUT.framework */; };
-		E74C0A8218F3B57C00061B6B /* libftgl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E75F629918F3586200AADDD5 /* libftgl.a */; };
 		E74C0A8318F3B57C00061B6B /* openFrameworksDebug.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E4328148138ABC890047C5CB /* openFrameworksDebug.a */; };
 		E74C0A8418F3B57C00061B6B /* AGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E45BE9710E8CC7DD009D7055 /* AGL.framework */; };
 		E74C0A8518F3B57C00061B6B /* ApplicationServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E45BE9720E8CC7DD009D7055 /* ApplicationServices.framework */; };
@@ -91,12 +85,37 @@
 		E74C0A9618F3B57C00061B6B /* HelveticaNeueBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E709DAAD18F3602500E67AA9 /* HelveticaNeueBold.ttf */; };
 		E74C0A9E18F3B5AF00061B6B /* icon_riftplayer.icns in Resources */ = {isa = PBXBuildFile; fileRef = E74C0A9D18F3B5AF00061B6B /* icon_riftplayer.icns */; };
 		E74C0AA018F3B91D00061B6B /* video_test_pattern.png in Resources */ = {isa = PBXBuildFile; fileRef = E74C0A9F18F3B91D00061B6B /* video_test_pattern.png */; };
-		E75F62E018F3586300AADDD5 /* libftgl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E75F629918F3586200AADDD5 /* libftgl.a */; };
-		E75F62E118F3586300AADDD5 /* libftgl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E75F629918F3586200AADDD5 /* libftgl.a */; };
-		E75F62EB18F3586300AADDD5 /* ofxFTGLFont.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E75F62A318F3586200AADDD5 /* ofxFTGLFont.cpp */; };
-		E75F62EC18F3586300AADDD5 /* ofxFTGLFont.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E75F62A318F3586200AADDD5 /* ofxFTGLFont.cpp */; };
-		E75F62ED18F3586300AADDD5 /* ofxFTGLSimpleLayout.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E75F62A518F3586200AADDD5 /* ofxFTGLSimpleLayout.cpp */; };
-		E75F62EE18F3586300AADDD5 /* ofxFTGLSimpleLayout.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E75F62A518F3586200AADDD5 /* ofxFTGLSimpleLayout.cpp */; };
+		F3C93EE819B4DAA1001CF123 /* ofxOculusDK2.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3C93D9619B4DAA0001CF123 /* ofxOculusDK2.cpp */; };
+		F3C93EE919B4DAA1001CF123 /* ofxOculusDK2.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3C93D9619B4DAA0001CF123 /* ofxOculusDK2.cpp */; };
+		F3C93EEA19B4DAA1001CF123 /* ofxOculusDK2.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3C93D9619B4DAA0001CF123 /* ofxOculusDK2.cpp */; };
+		F3C93FCF19B4DE7D001CF123 /* libovr.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F3C93EFA19B4DE7D001CF123 /* libovr.a */; };
+		F3C93FD019B4DE7D001CF123 /* libovr.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F3C93EFA19B4DE7D001CF123 /* libovr.a */; };
+		F3C93FD119B4DE7D001CF123 /* libovr.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F3C93EFA19B4DE7D001CF123 /* libovr.a */; };
+		F3C93FD519B4DE7D001CF123 /* libovr.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F3C93EFE19B4DE7D001CF123 /* libovr.a */; };
+		F3C93FD619B4DE7D001CF123 /* libovr.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F3C93EFE19B4DE7D001CF123 /* libovr.a */; };
+		F3C93FD719B4DE7D001CF123 /* libovr.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F3C93EFE19B4DE7D001CF123 /* libovr.a */; };
+		F3C9414B19B4DEB4001CF123 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = F3C940D519B4DEB3001CF123 /* .gitignore */; };
+		F3C9414C19B4DEB4001CF123 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = F3C940D519B4DEB3001CF123 /* .gitignore */; };
+		F3C9414D19B4DEB4001CF123 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = F3C940D519B4DEB3001CF123 /* .gitignore */; };
+		F3C941BD19B4DEB5001CF123 /* libftgl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F3C9413D19B4DEB4001CF123 /* libftgl.a */; };
+		F3C941BE19B4DEB5001CF123 /* libftgl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F3C9413D19B4DEB4001CF123 /* libftgl.a */; };
+		F3C941BF19B4DEB5001CF123 /* libftgl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F3C9413D19B4DEB4001CF123 /* libftgl.a */; };
+		F3C941CC19B4DEB5001CF123 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = F3C9414419B4DEB4001CF123 /* README.md */; };
+		F3C941CD19B4DEB5001CF123 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = F3C9414419B4DEB4001CF123 /* README.md */; };
+		F3C941CE19B4DEB5001CF123 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = F3C9414419B4DEB4001CF123 /* README.md */; };
+		F3C941CF19B4DEB5001CF123 /* ofxFTGLFont.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3C9414719B4DEB4001CF123 /* ofxFTGLFont.cpp */; };
+		F3C941D019B4DEB5001CF123 /* ofxFTGLFont.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3C9414719B4DEB4001CF123 /* ofxFTGLFont.cpp */; };
+		F3C941D119B4DEB5001CF123 /* ofxFTGLFont.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3C9414719B4DEB4001CF123 /* ofxFTGLFont.cpp */; };
+		F3C941D219B4DEB5001CF123 /* ofxFTGLSimpleLayout.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3C9414919B4DEB4001CF123 /* ofxFTGLSimpleLayout.cpp */; };
+		F3C941D319B4DEB5001CF123 /* ofxFTGLSimpleLayout.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3C9414919B4DEB4001CF123 /* ofxFTGLSimpleLayout.cpp */; };
+		F3C941D419B4DEB5001CF123 /* ofxFTGLSimpleLayout.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3C9414919B4DEB4001CF123 /* ofxFTGLSimpleLayout.cpp */; };
+		F3C941E519B4E9B3001CF123 /* ofAVFMovieRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = F3C941E219B4E9B3001CF123 /* ofAVFMovieRenderer.m */; };
+		F3C941E619B4E9B3001CF123 /* ofAVFMovieRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = F3C941E219B4E9B3001CF123 /* ofAVFMovieRenderer.m */; };
+		F3C941E719B4E9B3001CF123 /* ofAVFMovieRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = F3C941E219B4E9B3001CF123 /* ofAVFMovieRenderer.m */; };
+		F3C941E819B4E9B3001CF123 /* ofAVFoundationPlayer.mm in Sources */ = {isa = PBXBuildFile; fileRef = F3C941E419B4E9B3001CF123 /* ofAVFoundationPlayer.mm */; };
+		F3C941E919B4E9B3001CF123 /* ofAVFoundationPlayer.mm in Sources */ = {isa = PBXBuildFile; fileRef = F3C941E419B4E9B3001CF123 /* ofAVFoundationPlayer.mm */; };
+		F3C941EA19B4E9B3001CF123 /* ofAVFoundationPlayer.mm in Sources */ = {isa = PBXBuildFile; fileRef = F3C941E419B4E9B3001CF123 /* ofAVFoundationPlayer.mm */; };
+		F3C941EC19B4E9E7001CF123 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3C941EB19B4E9E7001CF123 /* AVFoundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -166,8 +185,6 @@
 /* Begin PBXFileReference section */
 		270A248C141220590073405C /* CoreMIDI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMIDI.framework; path = /System/Library/Frameworks/CoreMIDI.framework; sourceTree = "<absolute>"; };
 		BBAB23BE13894E4700AA2426 /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = ../../../libs/glut/lib/osx/GLUT.framework; sourceTree = "<group>"; };
-		CBA82EC11736A31D004EFE06 /* ofxOculusRift.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ofxOculusRift.cpp; sourceTree = "<group>"; };
-		CBA82EC21736A31D004EFE06 /* ofxOculusRift.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxOculusRift.h; sourceTree = "<group>"; };
 		E4328143138ABC890047C5CB /* openFrameworksLib.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = openFrameworksLib.xcodeproj; path = ../../../libs/openFrameworksCompiled/project/osx/openFrameworksLib.xcodeproj; sourceTree = SOURCE_ROOT; };
 		E45BE9710E8CC7DD009D7055 /* AGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AGL.framework; path = /System/Library/Frameworks/AGL.framework; sourceTree = "<absolute>"; };
 		E45BE9720E8CC7DD009D7055 /* ApplicationServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ApplicationServices.framework; path = /System/Library/Frameworks/ApplicationServices.framework; sourceTree = "<absolute>"; };
@@ -191,8 +208,8 @@
 		E7012D0018F34AD800A3F1EB /* CrossingBordersVR4kDebug.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CrossingBordersVR4kDebug.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7012D0118F34AD800A3F1EB /* OculusVideoViewer copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "OculusVideoViewer copy-Info.plist"; path = "/Users/focus/Documents/Xcode/of_v0.8.0_osx_release/apps/myApps/OculusSphericalVideoViewer/OculusVideoViewer copy-Info.plist"; sourceTree = "<absolute>"; };
 		E709DAAD18F3602500E67AA9 /* HelveticaNeueBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = HelveticaNeueBold.ttf; sourceTree = "<group>"; };
-		E709DAAF18F3602500E67AA9 /* CrossingBorders_1080p_h264 */ = {isa = PBXFileReference; lastKnownFileType = file; path = CrossingBorders_1080p_h264; sourceTree = "<group>"; };
-		E709DAB018F3602500E67AA9 /* CrossingBorders_4k_h264 */ = {isa = PBXFileReference; lastKnownFileType = file; path = CrossingBorders_4k_h264; sourceTree = "<group>"; };
+		E709DAAF18F3602500E67AA9 /* CrossingBorders_1080p_h264 */ = {isa = PBXFileReference; lastKnownFileType = text; path = CrossingBorders_1080p_h264; sourceTree = "<group>"; };
+		E709DAB018F3602500E67AA9 /* CrossingBorders_4k_h264 */ = {isa = PBXFileReference; lastKnownFileType = text; path = CrossingBorders_4k_h264; sourceTree = "<group>"; };
 		E709DACE18F3741D00E67AA9 /* icon_booka.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = icon_booka.icns; sourceTree = SOURCE_ROOT; };
 		E70AB76118E2211F001E6A32 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
 		E70AB76318E22124001E6A32 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
@@ -203,35 +220,45 @@
 		E74C0A9C18F3B57D00061B6B /* CrossingBorders4k copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "CrossingBorders4k copy-Info.plist"; path = "/Users/focus/Documents/Xcode/of_v0.8.0_osx_release/apps/myApps/OculusSphericalVideoViewer/CrossingBorders4k copy-Info.plist"; sourceTree = "<absolute>"; };
 		E74C0A9D18F3B5AF00061B6B /* icon_riftplayer.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = icon_riftplayer.icns; sourceTree = SOURCE_ROOT; };
 		E74C0A9F18F3B91D00061B6B /* video_test_pattern.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = video_test_pattern.png; sourceTree = "<group>"; };
-		E75F627C18F3586200AADDD5 /* FTBBox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTBBox.h; sourceTree = "<group>"; };
-		E75F627D18F3586200AADDD5 /* FTBitmapGlyph.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTBitmapGlyph.h; sourceTree = "<group>"; };
-		E75F627E18F3586200AADDD5 /* FTBuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTBuffer.h; sourceTree = "<group>"; };
-		E75F627F18F3586200AADDD5 /* FTBufferFont.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTBufferFont.h; sourceTree = "<group>"; };
-		E75F628018F3586200AADDD5 /* FTBufferGlyph.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTBufferGlyph.h; sourceTree = "<group>"; };
-		E75F628118F3586200AADDD5 /* FTExtrdGlyph.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTExtrdGlyph.h; sourceTree = "<group>"; };
-		E75F628218F3586200AADDD5 /* FTFont.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTFont.h; sourceTree = "<group>"; };
-		E75F628318F3586200AADDD5 /* ftgl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ftgl.h; sourceTree = "<group>"; };
-		E75F628418F3586200AADDD5 /* FTGLBitmapFont.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTGLBitmapFont.h; sourceTree = "<group>"; };
-		E75F628518F3586200AADDD5 /* FTGLExtrdFont.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTGLExtrdFont.h; sourceTree = "<group>"; };
-		E75F628618F3586200AADDD5 /* FTGLOutlineFont.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTGLOutlineFont.h; sourceTree = "<group>"; };
-		E75F628718F3586200AADDD5 /* FTGLPixmapFont.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTGLPixmapFont.h; sourceTree = "<group>"; };
-		E75F628818F3586200AADDD5 /* FTGLPolygonFont.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTGLPolygonFont.h; sourceTree = "<group>"; };
-		E75F628918F3586200AADDD5 /* FTGLTextureFont.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTGLTextureFont.h; sourceTree = "<group>"; };
-		E75F628A18F3586200AADDD5 /* FTGlyph.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTGlyph.h; sourceTree = "<group>"; };
-		E75F628B18F3586200AADDD5 /* FTLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTLayout.h; sourceTree = "<group>"; };
-		E75F628C18F3586200AADDD5 /* FTOutlineGlyph.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTOutlineGlyph.h; sourceTree = "<group>"; };
-		E75F628D18F3586200AADDD5 /* FTPixmapGlyph.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTPixmapGlyph.h; sourceTree = "<group>"; };
-		E75F628E18F3586200AADDD5 /* FTPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTPoint.h; sourceTree = "<group>"; };
-		E75F628F18F3586200AADDD5 /* FTPolyGlyph.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTPolyGlyph.h; sourceTree = "<group>"; };
-		E75F629018F3586200AADDD5 /* FTSimpleLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTSimpleLayout.h; sourceTree = "<group>"; };
-		E75F629118F3586200AADDD5 /* FTTextureGlyph.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTTextureGlyph.h; sourceTree = "<group>"; };
-		E75F629818F3586200AADDD5 /* buildFTGL.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = buildFTGL.sh; sourceTree = "<group>"; };
-		E75F629918F3586200AADDD5 /* libftgl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libftgl.a; sourceTree = "<group>"; };
-		E75F62A218F3586200AADDD5 /* ofxFTGL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxFTGL.h; sourceTree = "<group>"; };
-		E75F62A318F3586200AADDD5 /* ofxFTGLFont.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ofxFTGLFont.cpp; sourceTree = "<group>"; };
-		E75F62A418F3586200AADDD5 /* ofxFTGLFont.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxFTGLFont.h; sourceTree = "<group>"; };
-		E75F62A518F3586200AADDD5 /* ofxFTGLSimpleLayout.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ofxFTGLSimpleLayout.cpp; sourceTree = "<group>"; };
-		E75F62A618F3586200AADDD5 /* ofxFTGLSimpleLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxFTGLSimpleLayout.h; sourceTree = "<group>"; };
+		F3C93D9619B4DAA0001CF123 /* ofxOculusDK2.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ofxOculusDK2.cpp; sourceTree = "<group>"; };
+		F3C93D9719B4DAA0001CF123 /* ofxOculusDK2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxOculusDK2.h; sourceTree = "<group>"; };
+		F3C93EFA19B4DE7D001CF123 /* libovr.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libovr.a; sourceTree = "<group>"; };
+		F3C93EFE19B4DE7D001CF123 /* libovr.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libovr.a; sourceTree = "<group>"; };
+		F3C940D519B4DEB3001CF123 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		F3C9412019B4DEB4001CF123 /* FTBBox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTBBox.h; sourceTree = "<group>"; };
+		F3C9412119B4DEB4001CF123 /* FTBitmapGlyph.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTBitmapGlyph.h; sourceTree = "<group>"; };
+		F3C9412219B4DEB4001CF123 /* FTBuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTBuffer.h; sourceTree = "<group>"; };
+		F3C9412319B4DEB4001CF123 /* FTBufferFont.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTBufferFont.h; sourceTree = "<group>"; };
+		F3C9412419B4DEB4001CF123 /* FTBufferGlyph.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTBufferGlyph.h; sourceTree = "<group>"; };
+		F3C9412519B4DEB4001CF123 /* FTExtrdGlyph.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTExtrdGlyph.h; sourceTree = "<group>"; };
+		F3C9412619B4DEB4001CF123 /* FTFont.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTFont.h; sourceTree = "<group>"; };
+		F3C9412719B4DEB4001CF123 /* ftgl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ftgl.h; sourceTree = "<group>"; };
+		F3C9412819B4DEB4001CF123 /* FTGLBitmapFont.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTGLBitmapFont.h; sourceTree = "<group>"; };
+		F3C9412919B4DEB4001CF123 /* FTGLExtrdFont.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTGLExtrdFont.h; sourceTree = "<group>"; };
+		F3C9412A19B4DEB4001CF123 /* FTGLOutlineFont.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTGLOutlineFont.h; sourceTree = "<group>"; };
+		F3C9412B19B4DEB4001CF123 /* FTGLPixmapFont.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTGLPixmapFont.h; sourceTree = "<group>"; };
+		F3C9412C19B4DEB4001CF123 /* FTGLPolygonFont.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTGLPolygonFont.h; sourceTree = "<group>"; };
+		F3C9412D19B4DEB4001CF123 /* FTGLTextureFont.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTGLTextureFont.h; sourceTree = "<group>"; };
+		F3C9412E19B4DEB4001CF123 /* FTGlyph.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTGlyph.h; sourceTree = "<group>"; };
+		F3C9412F19B4DEB4001CF123 /* FTLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTLayout.h; sourceTree = "<group>"; };
+		F3C9413019B4DEB4001CF123 /* FTOutlineGlyph.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTOutlineGlyph.h; sourceTree = "<group>"; };
+		F3C9413119B4DEB4001CF123 /* FTPixmapGlyph.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTPixmapGlyph.h; sourceTree = "<group>"; };
+		F3C9413219B4DEB4001CF123 /* FTPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTPoint.h; sourceTree = "<group>"; };
+		F3C9413319B4DEB4001CF123 /* FTPolyGlyph.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTPolyGlyph.h; sourceTree = "<group>"; };
+		F3C9413419B4DEB4001CF123 /* FTSimpleLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTSimpleLayout.h; sourceTree = "<group>"; };
+		F3C9413519B4DEB4001CF123 /* FTTextureGlyph.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTTextureGlyph.h; sourceTree = "<group>"; };
+		F3C9413D19B4DEB4001CF123 /* libftgl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libftgl.a; sourceTree = "<group>"; };
+		F3C9414419B4DEB4001CF123 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+		F3C9414619B4DEB4001CF123 /* ofxFTGL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxFTGL.h; sourceTree = "<group>"; };
+		F3C9414719B4DEB4001CF123 /* ofxFTGLFont.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ofxFTGLFont.cpp; sourceTree = "<group>"; };
+		F3C9414819B4DEB4001CF123 /* ofxFTGLFont.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxFTGLFont.h; sourceTree = "<group>"; };
+		F3C9414919B4DEB4001CF123 /* ofxFTGLSimpleLayout.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ofxFTGLSimpleLayout.cpp; sourceTree = "<group>"; };
+		F3C9414A19B4DEB4001CF123 /* ofxFTGLSimpleLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxFTGLSimpleLayout.h; sourceTree = "<group>"; };
+		F3C941E119B4E9B3001CF123 /* ofAVFMovieRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofAVFMovieRenderer.h; sourceTree = "<group>"; };
+		F3C941E219B4E9B3001CF123 /* ofAVFMovieRenderer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ofAVFMovieRenderer.m; sourceTree = "<group>"; };
+		F3C941E319B4E9B3001CF123 /* ofAVFoundationPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofAVFoundationPlayer.h; sourceTree = "<group>"; };
+		F3C941E419B4E9B3001CF123 /* ofAVFoundationPlayer.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ofAVFoundationPlayer.mm; sourceTree = "<group>"; };
+		F3C941EB19B4E9E7001CF123 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -239,13 +266,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F3C93FCF19B4DE7D001CF123 /* libovr.a in Frameworks */,
 				E70AB76A18E221CC001E6A32 /* QTKit.framework in Frameworks */,
 				E70AB76818E22140001E6A32 /* Accelerate.framework in Frameworks */,
 				E70AB76618E2212C001E6A32 /* QuartzCore.framework in Frameworks */,
 				E70AB76418E22124001E6A32 /* CoreMedia.framework in Frameworks */,
+				F3C93FD519B4DE7D001CF123 /* libovr.a in Frameworks */,
 				E70AB76218E2211F001E6A32 /* CoreVideo.framework in Frameworks */,
+				F3C941BD19B4DEB5001CF123 /* libftgl.a in Frameworks */,
 				E4EB6799138ADC1D00A09F29 /* GLUT.framework in Frameworks */,
-				E75F62E018F3586300AADDD5 /* libftgl.a in Frameworks */,
 				E4328149138ABC9F0047C5CB /* openFrameworksDebug.a in Frameworks */,
 				E45BE97B0E8CC7DD009D7055 /* AGL.framework in Frameworks */,
 				E45BE97C0E8CC7DD009D7055 /* ApplicationServices.framework in Frameworks */,
@@ -267,13 +296,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F3C93FD019B4DE7D001CF123 /* libovr.a in Frameworks */,
 				E7012CE618F34AD800A3F1EB /* QTKit.framework in Frameworks */,
 				E7012CE718F34AD800A3F1EB /* Accelerate.framework in Frameworks */,
 				E7012CE818F34AD800A3F1EB /* QuartzCore.framework in Frameworks */,
 				E7012CE918F34AD800A3F1EB /* CoreMedia.framework in Frameworks */,
+				F3C93FD619B4DE7D001CF123 /* libovr.a in Frameworks */,
 				E7012CEA18F34AD800A3F1EB /* CoreVideo.framework in Frameworks */,
+				F3C941BE19B4DEB5001CF123 /* libftgl.a in Frameworks */,
 				E7012CEB18F34AD800A3F1EB /* GLUT.framework in Frameworks */,
-				E75F62E118F3586300AADDD5 /* libftgl.a in Frameworks */,
 				E7012CEC18F34AD800A3F1EB /* openFrameworksDebug.a in Frameworks */,
 				E7012CED18F34AD800A3F1EB /* AGL.framework in Frameworks */,
 				E7012CEE18F34AD800A3F1EB /* ApplicationServices.framework in Frameworks */,
@@ -295,13 +326,16 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E74C0A7C18F3B57C00061B6B /* QTKit.framework in Frameworks */,
-				E74C0A7D18F3B57C00061B6B /* Accelerate.framework in Frameworks */,
 				E74C0A7E18F3B57C00061B6B /* QuartzCore.framework in Frameworks */,
 				E74C0A7F18F3B57C00061B6B /* CoreMedia.framework in Frameworks */,
+				F3C941EC19B4E9E7001CF123 /* AVFoundation.framework in Frameworks */,
+				F3C93FD119B4DE7D001CF123 /* libovr.a in Frameworks */,
+				E74C0A7C18F3B57C00061B6B /* QTKit.framework in Frameworks */,
+				E74C0A7D18F3B57C00061B6B /* Accelerate.framework in Frameworks */,
+				F3C93FD719B4DE7D001CF123 /* libovr.a in Frameworks */,
 				E74C0A8018F3B57C00061B6B /* CoreVideo.framework in Frameworks */,
+				F3C941BF19B4DEB5001CF123 /* libftgl.a in Frameworks */,
 				E74C0A8118F3B57C00061B6B /* GLUT.framework in Frameworks */,
-				E74C0A8218F3B57C00061B6B /* libftgl.a in Frameworks */,
 				E74C0A8318F3B57C00061B6B /* openFrameworksDebug.a in Frameworks */,
 				E74C0A8418F3B57C00061B6B /* AGL.framework in Frameworks */,
 				E74C0A8518F3B57C00061B6B /* ApplicationServices.framework in Frameworks */,
@@ -325,8 +359,8 @@
 		BB4B014C10F69532006C3DED /* addons */ = {
 			isa = PBXGroup;
 			children = (
-				E75F622B18F3585F00AADDD5 /* ofxFTGL */,
-				CBA82EC41736A327004EFE06 /* ofxOculusRift */,
+				F3C940D419B4DEB3001CF123 /* ofxFTGL */,
+				F3C93C9219B4DA9F001CF123 /* ofxOculusDK2 */,
 			);
 			name = addons;
 			sourceTree = "<group>";
@@ -334,6 +368,7 @@
 		BBAB23C913894ECA00AA2426 /* system frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F3C941EB19B4E9E7001CF123 /* AVFoundation.framework */,
 				E70AB76918E221CC001E6A32 /* QTKit.framework */,
 				E70AB76718E22140001E6A32 /* Accelerate.framework */,
 				E70AB76518E2212C001E6A32 /* QuartzCore.framework */,
@@ -362,24 +397,6 @@
 				BBAB23BE13894E4700AA2426 /* GLUT.framework */,
 			);
 			name = "3rd party frameworks";
-			sourceTree = "<group>";
-		};
-		CBA82EC01736A31D004EFE06 /* src */ = {
-			isa = PBXGroup;
-			children = (
-				CBA82EC21736A31D004EFE06 /* ofxOculusRift.h */,
-				CBA82EC11736A31D004EFE06 /* ofxOculusRift.cpp */,
-			);
-			name = src;
-			path = ../../../addons/ofxOculusRift/src;
-			sourceTree = "<group>";
-		};
-		CBA82EC41736A327004EFE06 /* ofxOculusRift */ = {
-			isa = PBXGroup;
-			children = (
-				CBA82EC01736A31D004EFE06 /* src */,
-			);
-			name = ofxOculusRift;
 			sourceTree = "<group>";
 		};
 		E4328144138ABC890047C5CB /* Products */ = {
@@ -419,6 +436,10 @@
 		E4B69E1C0A3A1BDC003C02F2 /* src */ = {
 			isa = PBXGroup;
 			children = (
+				F3C941E119B4E9B3001CF123 /* ofAVFMovieRenderer.h */,
+				F3C941E219B4E9B3001CF123 /* ofAVFMovieRenderer.m */,
+				F3C941E319B4E9B3001CF123 /* ofAVFoundationPlayer.h */,
+				F3C941E419B4E9B3001CF123 /* ofAVFoundationPlayer.mm */,
 				E4B69E1D0A3A1BDC003C02F2 /* main.cpp */,
 				E4B69E1F0A3A1BDC003C02F2 /* testApp.h */,
 				E4B69E1E0A3A1BDC003C02F2 /* testApp.cpp */,
@@ -466,95 +487,157 @@
 			path = movies;
 			sourceTree = "<group>";
 		};
-		E75F622B18F3585F00AADDD5 /* ofxFTGL */ = {
+		F3C93C9219B4DA9F001CF123 /* ofxOculusDK2 */ = {
 			isa = PBXGroup;
 			children = (
-				E75F627818F3586200AADDD5 /* libs */,
-				E75F62A118F3586200AADDD5 /* src */,
+				F3C93EF019B4DE7D001CF123 /* LibOVR */,
+				F3C93D9519B4DAA0001CF123 /* src */,
+			);
+			name = ofxOculusDK2;
+			path = ../../../addons/ofxOculusDK2;
+			sourceTree = "<group>";
+		};
+		F3C93D9519B4DAA0001CF123 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				F3C93D9619B4DAA0001CF123 /* ofxOculusDK2.cpp */,
+				F3C93D9719B4DAA0001CF123 /* ofxOculusDK2.h */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		F3C93EF019B4DE7D001CF123 /* LibOVR */ = {
+			isa = PBXGroup;
+			children = (
+				F3C93EF519B4DE7D001CF123 /* Lib */,
+			);
+			name = LibOVR;
+			path = libs/LibOVR;
+			sourceTree = "<group>";
+		};
+		F3C93EF519B4DE7D001CF123 /* Lib */ = {
+			isa = PBXGroup;
+			children = (
+				F3C93EF619B4DE7D001CF123 /* MacOS */,
+			);
+			path = Lib;
+			sourceTree = "<group>";
+		};
+		F3C93EF619B4DE7D001CF123 /* MacOS */ = {
+			isa = PBXGroup;
+			children = (
+				F3C93EF919B4DE7D001CF123 /* Debug32 */,
+				F3C93EFD19B4DE7D001CF123 /* Release32 */,
+			);
+			path = MacOS;
+			sourceTree = "<group>";
+		};
+		F3C93EF919B4DE7D001CF123 /* Debug32 */ = {
+			isa = PBXGroup;
+			children = (
+				F3C93EFA19B4DE7D001CF123 /* libovr.a */,
+			);
+			path = Debug32;
+			sourceTree = "<group>";
+		};
+		F3C93EFD19B4DE7D001CF123 /* Release32 */ = {
+			isa = PBXGroup;
+			children = (
+				F3C93EFE19B4DE7D001CF123 /* libovr.a */,
+			);
+			path = Release32;
+			sourceTree = "<group>";
+		};
+		F3C940D419B4DEB3001CF123 /* ofxFTGL */ = {
+			isa = PBXGroup;
+			children = (
+				F3C940D519B4DEB3001CF123 /* .gitignore */,
+				F3C9411C19B4DEB4001CF123 /* libs */,
+				F3C9414419B4DEB4001CF123 /* README.md */,
+				F3C9414519B4DEB4001CF123 /* src */,
 			);
 			name = ofxFTGL;
 			path = ../../../addons/ofxFTGL;
 			sourceTree = "<group>";
 		};
-		E75F627818F3586200AADDD5 /* libs */ = {
+		F3C9411C19B4DEB4001CF123 /* libs */ = {
 			isa = PBXGroup;
 			children = (
-				E75F627918F3586200AADDD5 /* FTGL */,
+				F3C9411D19B4DEB4001CF123 /* FTGL */,
 			);
 			path = libs;
 			sourceTree = "<group>";
 		};
-		E75F627918F3586200AADDD5 /* FTGL */ = {
+		F3C9411D19B4DEB4001CF123 /* FTGL */ = {
 			isa = PBXGroup;
 			children = (
-				E75F627A18F3586200AADDD5 /* include */,
-				E75F629218F3586200AADDD5 /* lib */,
+				F3C9411E19B4DEB4001CF123 /* include */,
+				F3C9413619B4DEB4001CF123 /* lib */,
 			);
 			path = FTGL;
 			sourceTree = "<group>";
 		};
-		E75F627A18F3586200AADDD5 /* include */ = {
+		F3C9411E19B4DEB4001CF123 /* include */ = {
 			isa = PBXGroup;
 			children = (
-				E75F627B18F3586200AADDD5 /* FTGL */,
+				F3C9411F19B4DEB4001CF123 /* FTGL */,
 			);
 			path = include;
 			sourceTree = "<group>";
 		};
-		E75F627B18F3586200AADDD5 /* FTGL */ = {
+		F3C9411F19B4DEB4001CF123 /* FTGL */ = {
 			isa = PBXGroup;
 			children = (
-				E75F627C18F3586200AADDD5 /* FTBBox.h */,
-				E75F627D18F3586200AADDD5 /* FTBitmapGlyph.h */,
-				E75F627E18F3586200AADDD5 /* FTBuffer.h */,
-				E75F627F18F3586200AADDD5 /* FTBufferFont.h */,
-				E75F628018F3586200AADDD5 /* FTBufferGlyph.h */,
-				E75F628118F3586200AADDD5 /* FTExtrdGlyph.h */,
-				E75F628218F3586200AADDD5 /* FTFont.h */,
-				E75F628318F3586200AADDD5 /* ftgl.h */,
-				E75F628418F3586200AADDD5 /* FTGLBitmapFont.h */,
-				E75F628518F3586200AADDD5 /* FTGLExtrdFont.h */,
-				E75F628618F3586200AADDD5 /* FTGLOutlineFont.h */,
-				E75F628718F3586200AADDD5 /* FTGLPixmapFont.h */,
-				E75F628818F3586200AADDD5 /* FTGLPolygonFont.h */,
-				E75F628918F3586200AADDD5 /* FTGLTextureFont.h */,
-				E75F628A18F3586200AADDD5 /* FTGlyph.h */,
-				E75F628B18F3586200AADDD5 /* FTLayout.h */,
-				E75F628C18F3586200AADDD5 /* FTOutlineGlyph.h */,
-				E75F628D18F3586200AADDD5 /* FTPixmapGlyph.h */,
-				E75F628E18F3586200AADDD5 /* FTPoint.h */,
-				E75F628F18F3586200AADDD5 /* FTPolyGlyph.h */,
-				E75F629018F3586200AADDD5 /* FTSimpleLayout.h */,
-				E75F629118F3586200AADDD5 /* FTTextureGlyph.h */,
+				F3C9412019B4DEB4001CF123 /* FTBBox.h */,
+				F3C9412119B4DEB4001CF123 /* FTBitmapGlyph.h */,
+				F3C9412219B4DEB4001CF123 /* FTBuffer.h */,
+				F3C9412319B4DEB4001CF123 /* FTBufferFont.h */,
+				F3C9412419B4DEB4001CF123 /* FTBufferGlyph.h */,
+				F3C9412519B4DEB4001CF123 /* FTExtrdGlyph.h */,
+				F3C9412619B4DEB4001CF123 /* FTFont.h */,
+				F3C9412719B4DEB4001CF123 /* ftgl.h */,
+				F3C9412819B4DEB4001CF123 /* FTGLBitmapFont.h */,
+				F3C9412919B4DEB4001CF123 /* FTGLExtrdFont.h */,
+				F3C9412A19B4DEB4001CF123 /* FTGLOutlineFont.h */,
+				F3C9412B19B4DEB4001CF123 /* FTGLPixmapFont.h */,
+				F3C9412C19B4DEB4001CF123 /* FTGLPolygonFont.h */,
+				F3C9412D19B4DEB4001CF123 /* FTGLTextureFont.h */,
+				F3C9412E19B4DEB4001CF123 /* FTGlyph.h */,
+				F3C9412F19B4DEB4001CF123 /* FTLayout.h */,
+				F3C9413019B4DEB4001CF123 /* FTOutlineGlyph.h */,
+				F3C9413119B4DEB4001CF123 /* FTPixmapGlyph.h */,
+				F3C9413219B4DEB4001CF123 /* FTPoint.h */,
+				F3C9413319B4DEB4001CF123 /* FTPolyGlyph.h */,
+				F3C9413419B4DEB4001CF123 /* FTSimpleLayout.h */,
+				F3C9413519B4DEB4001CF123 /* FTTextureGlyph.h */,
 			);
 			path = FTGL;
 			sourceTree = "<group>";
 		};
-		E75F629218F3586200AADDD5 /* lib */ = {
+		F3C9413619B4DEB4001CF123 /* lib */ = {
 			isa = PBXGroup;
 			children = (
-				E75F629718F3586200AADDD5 /* osx */,
+				F3C9413B19B4DEB4001CF123 /* osx */,
 			);
 			path = lib;
 			sourceTree = "<group>";
 		};
-		E75F629718F3586200AADDD5 /* osx */ = {
+		F3C9413B19B4DEB4001CF123 /* osx */ = {
 			isa = PBXGroup;
 			children = (
-				E75F629818F3586200AADDD5 /* buildFTGL.sh */,
-				E75F629918F3586200AADDD5 /* libftgl.a */,
+				F3C9413D19B4DEB4001CF123 /* libftgl.a */,
 			);
 			path = osx;
 			sourceTree = "<group>";
 		};
-		E75F62A118F3586200AADDD5 /* src */ = {
+		F3C9414519B4DEB4001CF123 /* src */ = {
 			isa = PBXGroup;
 			children = (
-				E75F62A218F3586200AADDD5 /* ofxFTGL.h */,
-				E75F62A318F3586200AADDD5 /* ofxFTGLFont.cpp */,
-				E75F62A418F3586200AADDD5 /* ofxFTGLFont.h */,
-				E75F62A518F3586200AADDD5 /* ofxFTGLSimpleLayout.cpp */,
-				E75F62A618F3586200AADDD5 /* ofxFTGLSimpleLayout.h */,
+				F3C9414619B4DEB4001CF123 /* ofxFTGL.h */,
+				F3C9414719B4DEB4001CF123 /* ofxFTGLFont.cpp */,
+				F3C9414819B4DEB4001CF123 /* ofxFTGLFont.h */,
+				F3C9414919B4DEB4001CF123 /* ofxFTGLSimpleLayout.cpp */,
+				F3C9414A19B4DEB4001CF123 /* ofxFTGLSimpleLayout.h */,
 			);
 			path = src;
 			sourceTree = "<group>";
@@ -673,8 +756,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F3C9414C19B4DEB4001CF123 /* .gitignore in Resources */,
 				E709DAD018F3741D00E67AA9 /* icon_booka.icns in Resources */,
 				E709DAB218F3602500E67AA9 /* HelveticaNeueBold.ttf in Resources */,
+				F3C941CD19B4DEB5001CF123 /* README.md in Resources */,
 				E709DAB418F3602500E67AA9 /* CrossingBorders_4k_h264 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -683,8 +768,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F3C9414B19B4DEB4001CF123 /* .gitignore in Resources */,
 				E709DACF18F3741D00E67AA9 /* icon_booka.icns in Resources */,
 				E709DAB618F3606D00E67AA9 /* CrossingBorders_1080p_h264 in Resources */,
+				F3C941CC19B4DEB5001CF123 /* README.md in Resources */,
 				E709DAB718F3607000E67AA9 /* HelveticaNeueBold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -693,8 +780,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F3C9414D19B4DEB4001CF123 /* .gitignore in Resources */,
 				E74C0AA018F3B91D00061B6B /* video_test_pattern.png in Resources */,
 				E74C0A9E18F3B5AF00061B6B /* icon_riftplayer.icns in Resources */,
+				F3C941CE19B4DEB5001CF123 /* README.md in Resources */,
 				E74C0A9618F3B57C00061B6B /* HelveticaNeueBold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -748,11 +837,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E75F62ED18F3586300AADDD5 /* ofxFTGLSimpleLayout.cpp in Sources */,
-				E75F62EB18F3586300AADDD5 /* ofxFTGLFont.cpp in Sources */,
+				F3C941D219B4DEB5001CF123 /* ofxFTGLSimpleLayout.cpp in Sources */,
+				F3C941E819B4E9B3001CF123 /* ofAVFoundationPlayer.mm in Sources */,
+				F3C941CF19B4DEB5001CF123 /* ofxFTGLFont.cpp in Sources */,
+				F3C93EE819B4DAA1001CF123 /* ofxOculusDK2.cpp in Sources */,
 				E4B69E200A3A1BDC003C02F2 /* main.cpp in Sources */,
+				F3C941E519B4E9B3001CF123 /* ofAVFMovieRenderer.m in Sources */,
 				E4B69E210A3A1BDC003C02F2 /* testApp.cpp in Sources */,
-				CBA82EC31736A31D004EFE06 /* ofxOculusRift.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -760,11 +851,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E75F62EE18F3586300AADDD5 /* ofxFTGLSimpleLayout.cpp in Sources */,
-				E75F62EC18F3586300AADDD5 /* ofxFTGLFont.cpp in Sources */,
+				F3C941D319B4DEB5001CF123 /* ofxFTGLSimpleLayout.cpp in Sources */,
+				F3C941E919B4E9B3001CF123 /* ofAVFoundationPlayer.mm in Sources */,
+				F3C941D019B4DEB5001CF123 /* ofxFTGLFont.cpp in Sources */,
+				F3C93EE919B4DAA1001CF123 /* ofxOculusDK2.cpp in Sources */,
 				E7012CE218F34AD800A3F1EB /* main.cpp in Sources */,
+				F3C941E619B4E9B3001CF123 /* ofAVFMovieRenderer.m in Sources */,
 				E7012CE318F34AD800A3F1EB /* testApp.cpp in Sources */,
-				E7012CE418F34AD800A3F1EB /* ofxOculusRift.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -772,11 +865,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E74C0A7618F3B57C00061B6B /* ofxFTGLSimpleLayout.cpp in Sources */,
-				E74C0A7718F3B57C00061B6B /* ofxFTGLFont.cpp in Sources */,
+				F3C941D419B4DEB5001CF123 /* ofxFTGLSimpleLayout.cpp in Sources */,
+				F3C941EA19B4E9B3001CF123 /* ofAVFoundationPlayer.mm in Sources */,
+				F3C941D119B4DEB5001CF123 /* ofxFTGLFont.cpp in Sources */,
+				F3C93EEA19B4DAA1001CF123 /* ofxOculusDK2.cpp in Sources */,
 				E74C0A7818F3B57C00061B6B /* main.cpp in Sources */,
+				F3C941E719B4E9B3001CF123 /* ofAVFMovieRenderer.m in Sources */,
 				E74C0A7918F3B57C00061B6B /* testApp.cpp in Sources */,
-				E74C0A7A18F3B57C00061B6B /* ofxOculusRift.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -953,7 +1048,24 @@
 					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_50)",
 					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_51)",
 					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_52)",
-					/Users/focus/Documents/Xcode/of_v0.8.0_osx_release/addons/ofxFTGL/libs/FTGL/lib/osx,
+					"$(OF_PATH)/addons/ofxFTGL/libs/FTGL/lib/osx",
+					"$(OF_PATH)/addons/ofxOculusDK2/libs/LibOVR/Lib/MacOS/Debug32",
+					/Users/obviousjim/Documents/xcode/of_v0.8.3_osx_release/addons/ofxOculusDK2/libs/LibOVR/Lib/MacOS/Debug,
+					/Users/obviousjim/Documents/xcode/of_v0.8.3_osx_release/addons/ofxOculusDK2/libs/LibOVR/Lib/MacOS/Debug32,
+					/Users/obviousjim/Documents/xcode/of_v0.8.3_osx_release/addons/ofxOculusDK2/libs/LibOVR/Lib/MacOS/Release,
+					/Users/obviousjim/Documents/xcode/of_v0.8.3_osx_release/addons/ofxOculusDK2/libs/LibOVR/Lib/MacOS/Release32,
+					/Users/obviousjim/Documents/xcode/of_v0.8.3_osx_release/addons/ofxOculusDK2/libs/LibOVR/Lib/x64/VS2010,
+					/Users/obviousjim/Documents/xcode/of_v0.8.3_osx_release/addons/ofxOculusDK2/libs/LibOVR/Lib/x64/VS2012,
+					/Users/obviousjim/Documents/xcode/of_v0.8.3_osx_release/addons/ofxOculusDK2/libs/LibOVR/Lib/x64/VS2013,
+					/Users/obviousjim/Documents/xcode/of_v0.8.3_osx_release/addons/ofxFTGL/libs/FTGL/lib/linux,
+					/Users/obviousjim/Documents/xcode/of_v0.8.3_osx_release/addons/ofxFTGL/libs/FTGL/lib/linux64,
+					/Users/obviousjim/Documents/xcode/of_v0.8.3_osx_release/addons/ofxFTGL/libs/FTGL/lib/osx,
+					/Users/obviousjim/Documents/xcode/of_v0.8.3_osx_release/addons/ofxFTGL/libs/FTGL/lib/vs,
+					/Users/obviousjim/Documents/xcode/of_v0.8.3_osx_release/addons/ofxFTGL/libs/FTGL/lib/vs64,
+				);
+				OTHER_LDFLAGS = (
+					"$(OF_CORE_LIBS)",
+					"$(OF_PATH/addons/ofxOculusDK2/libs/LibOVR/Lib/MacOS/Debug32/libovr.a",
 				);
 				PRODUCT_NAME = CrossingBordersVRDebug;
 				WRAPPER_EXTENSION = app;
@@ -1039,7 +1151,25 @@
 					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_49)",
 					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_50)",
 					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_51)",
-					/Users/focus/Documents/Xcode/of_v0.8.0_osx_release/addons/ofxFTGL/libs/FTGL/lib/osx,
+					"$(OF_PATH)/addons/ofxFTGL/libs/FTGL/lib/osx",
+					"$(OF_PATH)/addons/ofxOculusDK2/libs/LibOVR/Lib/MacOS/Release32",
+					/Users/obviousjim/Documents/xcode/of_v0.8.3_osx_release/addons/ofxOculusDK2/libs/LibOVR/Lib/MacOS/Debug,
+					/Users/obviousjim/Documents/xcode/of_v0.8.3_osx_release/addons/ofxOculusDK2/libs/LibOVR/Lib/MacOS/Debug32,
+					/Users/obviousjim/Documents/xcode/of_v0.8.3_osx_release/addons/ofxOculusDK2/libs/LibOVR/Lib/MacOS/Release,
+					/Users/obviousjim/Documents/xcode/of_v0.8.3_osx_release/addons/ofxOculusDK2/libs/LibOVR/Lib/MacOS/Release32,
+					/Users/obviousjim/Documents/xcode/of_v0.8.3_osx_release/addons/ofxOculusDK2/libs/LibOVR/Lib/x64/VS2010,
+					/Users/obviousjim/Documents/xcode/of_v0.8.3_osx_release/addons/ofxOculusDK2/libs/LibOVR/Lib/x64/VS2012,
+					/Users/obviousjim/Documents/xcode/of_v0.8.3_osx_release/addons/ofxOculusDK2/libs/LibOVR/Lib/x64/VS2013,
+					/Users/obviousjim/Documents/xcode/of_v0.8.3_osx_release/addons/ofxFTGL/libs/FTGL/lib/linux,
+					/Users/obviousjim/Documents/xcode/of_v0.8.3_osx_release/addons/ofxFTGL/libs/FTGL/lib/linux64,
+					/Users/obviousjim/Documents/xcode/of_v0.8.3_osx_release/addons/ofxFTGL/libs/FTGL/lib/osx,
+					/Users/obviousjim/Documents/xcode/of_v0.8.3_osx_release/addons/ofxFTGL/libs/FTGL/lib/vs,
+					/Users/obviousjim/Documents/xcode/of_v0.8.3_osx_release/addons/ofxFTGL/libs/FTGL/lib/vs64,
+				);
+				OTHER_LDFLAGS = (
+					"$(OF_CORE_LIBS)",
+					"$(OF_PATH/addons/ofxOculusDK2/libs/LibOVR/Lib/MacOS/Release32/libovr.a",
+					"\b",
 				);
 				PRODUCT_NAME = CrossingBordersVR;
 				WRAPPER_EXTENSION = app;
@@ -1127,6 +1257,18 @@
 					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_51)",
 					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_52)",
 					/Users/focus/Documents/Xcode/of_v0.8.0_osx_release/addons/ofxFTGL/libs/FTGL/lib/osx,
+					/Users/obviousjim/Documents/xcode/of_v0.8.3_osx_release/addons/ofxOculusDK2/libs/LibOVR/Lib/MacOS/Debug,
+					/Users/obviousjim/Documents/xcode/of_v0.8.3_osx_release/addons/ofxOculusDK2/libs/LibOVR/Lib/MacOS/Release,
+					/Users/obviousjim/Documents/xcode/of_v0.8.3_osx_release/addons/ofxOculusDK2/libs/LibOVR/Lib/x64/VS2010,
+					/Users/obviousjim/Documents/xcode/of_v0.8.3_osx_release/addons/ofxOculusDK2/libs/LibOVR/Lib/x64/VS2012,
+					/Users/obviousjim/Documents/xcode/of_v0.8.3_osx_release/addons/ofxOculusDK2/libs/LibOVR/Lib/x64/VS2013,
+					/Users/obviousjim/Documents/xcode/of_v0.8.3_osx_release/addons/ofxOculusDK2/libs/LibOVR/Lib/MacOS/Debug32,
+					/Users/obviousjim/Documents/xcode/of_v0.8.3_osx_release/addons/ofxOculusDK2/libs/LibOVR/Lib/MacOS/Release32,
+					/Users/obviousjim/Documents/xcode/of_v0.8.3_osx_release/addons/ofxFTGL/libs/FTGL/lib/linux,
+					/Users/obviousjim/Documents/xcode/of_v0.8.3_osx_release/addons/ofxFTGL/libs/FTGL/lib/linux64,
+					/Users/obviousjim/Documents/xcode/of_v0.8.3_osx_release/addons/ofxFTGL/libs/FTGL/lib/osx,
+					/Users/obviousjim/Documents/xcode/of_v0.8.3_osx_release/addons/ofxFTGL/libs/FTGL/lib/vs,
+					/Users/obviousjim/Documents/xcode/of_v0.8.3_osx_release/addons/ofxFTGL/libs/FTGL/lib/vs64,
 				);
 				PRODUCT_NAME = CrossingBordersVR4kDebug;
 				WRAPPER_EXTENSION = app;
@@ -1213,6 +1355,18 @@
 					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_50)",
 					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_51)",
 					/Users/focus/Documents/Xcode/of_v0.8.0_osx_release/addons/ofxFTGL/libs/FTGL/lib/osx,
+					/Users/obviousjim/Documents/xcode/of_v0.8.3_osx_release/addons/ofxOculusDK2/libs/LibOVR/Lib/MacOS/Debug,
+					/Users/obviousjim/Documents/xcode/of_v0.8.3_osx_release/addons/ofxOculusDK2/libs/LibOVR/Lib/MacOS/Release,
+					/Users/obviousjim/Documents/xcode/of_v0.8.3_osx_release/addons/ofxOculusDK2/libs/LibOVR/Lib/x64/VS2010,
+					/Users/obviousjim/Documents/xcode/of_v0.8.3_osx_release/addons/ofxOculusDK2/libs/LibOVR/Lib/x64/VS2012,
+					/Users/obviousjim/Documents/xcode/of_v0.8.3_osx_release/addons/ofxOculusDK2/libs/LibOVR/Lib/x64/VS2013,
+					/Users/obviousjim/Documents/xcode/of_v0.8.3_osx_release/addons/ofxOculusDK2/libs/LibOVR/Lib/MacOS/Debug32,
+					/Users/obviousjim/Documents/xcode/of_v0.8.3_osx_release/addons/ofxOculusDK2/libs/LibOVR/Lib/MacOS/Release32,
+					/Users/obviousjim/Documents/xcode/of_v0.8.3_osx_release/addons/ofxFTGL/libs/FTGL/lib/linux,
+					/Users/obviousjim/Documents/xcode/of_v0.8.3_osx_release/addons/ofxFTGL/libs/FTGL/lib/linux64,
+					/Users/obviousjim/Documents/xcode/of_v0.8.3_osx_release/addons/ofxFTGL/libs/FTGL/lib/osx,
+					/Users/obviousjim/Documents/xcode/of_v0.8.3_osx_release/addons/ofxFTGL/libs/FTGL/lib/vs,
+					/Users/obviousjim/Documents/xcode/of_v0.8.3_osx_release/addons/ofxFTGL/libs/FTGL/lib/vs64,
 				);
 				PRODUCT_NAME = CrossingBordersVR4k;
 				WRAPPER_EXTENSION = app;
@@ -1299,7 +1453,8 @@
 					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_50)",
 					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_51)",
 					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_52)",
-					/Users/focus/Documents/Xcode/of_v0.8.0_osx_release/addons/ofxFTGL/libs/FTGL/lib/osx,
+					"$(OF_PATH)/addons/ofxOculusDK2/libs/LibOVR/Lib/MacOS/Debug32",
+					"$(OF_PATH)/addons/ofxFTGL/libs/FTGL/lib/osx",
 				);
 				PRODUCT_NAME = OculusVideoPlayerDebug;
 				WRAPPER_EXTENSION = app;
@@ -1385,7 +1540,8 @@
 					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_49)",
 					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_50)",
 					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_51)",
-					/Users/focus/Documents/Xcode/of_v0.8.0_osx_release/addons/ofxFTGL/libs/FTGL/lib/osx,
+					"$(OF_PATH)/addons/ofxOculusDK2/libs/LibOVR/Lib/MacOS/Release32",
+					"$(OF_PATH)/addons/ofxFTGL/libs/FTGL/lib/osx",
 				);
 				PRODUCT_NAME = OculusVideoPlayer;
 				WRAPPER_EXTENSION = app;

@@ -20,9 +20,9 @@ void testApp::setup() {
     chdir(path);
 	#endif
 	
-	#ifndef TARGET_WIN32
-	player.setUseTexture(false);
-	#endif
+	//#ifndef TARGET_WIN32
+	//player.setUseTexture(false);
+	//#endif
 
 	font.loadFont("HelveticaNeueBold.ttf", 28);
 	fontSmall.loadFont("HelveticaNeueBold.ttf", 10);
@@ -61,6 +61,7 @@ void testApp::update()
 	}
 	
 	player.update();
+#ifdef TARGET_WIN32
 	if(player.isFrameNew()){
 		
 		if(!videoTexture.isAllocated() ||
@@ -73,6 +74,8 @@ void testApp::update()
 
 		videoTexture.loadData(player.getPixelsRef());
 	}
+#endif
+    
 }
 
 //--------------------------------------------------------------
@@ -95,14 +98,7 @@ void testApp::draw()
 {
 
 	if(oculusRift.isSetup()){
-
-		ofPushStyle();
-		string instructions = "'f' toggle full screen";
-		int width = fontSmall.stringWidth(instructions);
-		ofSetColor(255*.4);
-		fontSmall.drawString(instructions,oculusRift.getOculusViewport().getWidth() - width/2, 40);
-		ofPopStyle();
-		
+        int width;
 		if(!videoTexture.isAllocated()){
 			int overlayWidth  = 512;
 			int overlayHeight = 512;
@@ -119,8 +115,8 @@ void testApp::draw()
 		
         ofSetColor(255);
 
-		glEnable(GL_DEPTH_TEST);
-		
+		ofEnableDepthTest();
+        
 		oculusRift.beginLeftEye();
 		drawScene();
 		oculusRift.endLeftEye();
@@ -131,8 +127,21 @@ void testApp::draw()
 		
 		oculusRift.draw();
 		
-		glDisable(GL_DEPTH_TEST);
+		ofDisableDepthTest();
 		
+        ofPushStyle();
+		
+        string instructions = "'f' toggle full screen";
+		width = fontSmall.stringWidth(instructions);
+		ofSetColor(255*.4);
+		fontSmall.drawString(instructions,ofGetWidth()/2 - width/2, 40);
+
+        width = fontSmall.stringWidth("0.000");
+        char framerate[512];
+        sprintf(framerate, "%.03f", ofGetFrameRate());
+        fontSmall.drawString(framerate, ofGetWidth()/2 - width/2, ofGetHeight()-60);
+		
+        ofPopStyle();
     }
 	else{
 		ofPushStyle();
@@ -155,13 +164,20 @@ void testApp::drawScene()
 {
 	ofPushStyle();
 	ofPushMatrix();
-//	ofScale(1,-1,1);
 	
+#ifdef TARGET_WIN32
 	if(videoTexture.isAllocated()){
 		videoTexture.bind();
 		sphereMesh.draw();
 		videoTexture.unbind();
-	}
+    }
+#else
+    if(player.isLoaded()){
+ 		player.getTextureReference().bind();
+		sphereMesh.draw();
+		player.getTextureReference().unbind();
+     }
+#endif
 	else{
 		videoTestPattern.getTextureReference().bind();
 		sphereMesh.draw();
@@ -184,6 +200,12 @@ void testApp::keyPressed(int key)
 		//gotta toggle full screen for it to be right
 		ofToggleFullscreen();
 	}
+    
+    if(key == OF_KEY_BACKSPACE){
+        if(oculusRift.isSetup()){
+            oculusRift.reset();
+        }
+    }
 }
 
 //--------------------------------------------------------------
