@@ -9,25 +9,29 @@ void testApp::setup() {
 	ofBackground(0);
 	ofSetVerticalSync(true);
 
+	player.loadMovie( "video_test.mov" );
+	ofToggleFullscreen();
+	
 	//look in the bundle!
-	#ifdef TARGET_OSX
-	ofDisableDataPath();
-    CFBundleRef mainBundle = CFBundleGetMainBundle();
-    CFURLRef resourcesURL = CFBundleCopyResourcesDirectoryURL(mainBundle);
-    char path[PATH_MAX];
-    CFURLGetFileSystemRepresentation(resourcesURL, TRUE, (UInt8 *)path, PATH_MAX);
-    CFRelease(resourcesURL);
-    chdir(path);
-	#endif
+//	#ifdef TARGET_OSX
+//	ofDisableDataPath();
+//  CFBundleRef mainBundle = CFBundleGetMainBundle();
+//  CFURLRef resourcesURL = CFBundleCopyResourcesDirectoryURL(mainBundle);
+//  char path[PATH_MAX];
+//  CFURLGetFileSystemRepresentation(resourcesURL, TRUE, (UInt8 *)path, PATH_MAX);
+//  CFRelease(resourcesURL);
+//  chdir(path);
+//	#endif
 	
 	#ifndef TARGET_WIN32
 	player.setUseTexture(false);
 	#endif
 
-	font.loadFont("HelveticaNeueBold.ttf", 28);
-	fontSmall.loadFont("HelveticaNeueBold.ttf", 10);
+	font.loadFont("font/HelveticaNeueBold.ttf", 28);
+	fontSmall.loadFont("font/HelveticaNeueBold.ttf", 10);
 	
 	oculusRift.baseCamera = &cam;
+	oculusRift.applyTranslation = false; //don't move the camers
 	oculusRift.setup();
 	
 	if(oculusRift.isSetup()){
@@ -47,10 +51,48 @@ void testApp::setup() {
 		videoTestPattern.loadImage("video_test_pattern.png");
 		createMeshWithTexture(videoTestPattern.getTextureReference());
 		#endif
-		
-		
 	}
+}
+
+//--------------------------------------------------------------
+void testApp::loadSettings(){
+	ofBuffer b;
+	if(ofFile("settings.txt").exists()){
+		
+		b = ofBufferFromFile("settings.txt");
+		
+		leftCorrection.set(ofToFloat(b.getNextLine()),
+						   ofToFloat(b.getNextLine()),
+						   ofToFloat(b.getNextLine()),
+						   ofToFloat(b.getNextLine()));
+
+		rightCorrection.set(ofToFloat(b.getNextLine()),
+							ofToFloat(b.getNextLine()),
+							ofToFloat(b.getNextLine()),
+							ofToFloat(b.getNextLine()));
+		
+		converge = ofToFloat( b.getNextLine() );
+	}
+		
+}
+
+//--------------------------------------------------------------
+void testApp::saveSettings(){
+	ofBuffer b;
 	
+	b.append(ofToString(leftCorrection.x())+"\n");
+	b.append(ofToString(leftCorrection.y())+"\n");
+	b.append(ofToString(leftCorrection.z())+"\n");
+	b.append(ofToString(leftCorrection.w())+"\n");
+
+	b.append(ofToString(rightCorrection.x())+"\n");
+	b.append(ofToString(rightCorrection.y())+"\n");
+	b.append(ofToString(rightCorrection.z())+"\n");
+	b.append(ofToString(rightCorrection.w())+"\n");
+	
+	b.append(ofToString(converge)+"\n");
+	
+	ofBufferToFile("settings.txt", b);
 }
 
 //--------------------------------------------------------------
@@ -78,14 +120,23 @@ void testApp::update()
 //--------------------------------------------------------------
 void testApp::createMeshWithTexture(ofTexture& texture){
 	
-	ofSpherePrimitive p = ofSpherePrimitive(100.0,60);
-	sphereMesh = p.getMesh();
+	ofSpherePrimitive p = ofSpherePrimitive(1,60);
+	sphereMeshLeft  = p.getMesh();
+	sphereMeshRight = p.getMesh();
 	
-	for(int i = 0; i < sphereMesh.getNumVertices(); i++){
-		ofVec2f texCoord = sphereMesh.getTexCoord(i);
-		texCoord.x *= texture.getWidth();
-		texCoord.y  = (1.0 - texCoord.y) * texture.getHeight();
-		sphereMesh.setTexCoord(i, texCoord);
+	float halfHeight = texture.getHeight() * .5;
+	for(int i = 0; i < sphereMeshLeft.getNumVertices(); i++){
+		ofVec2f texCoord = sphereMeshLeft.getTexCoord(i);
+		texCoord.x = (1.0 - texCoord.x) * texture.getWidth();
+		texCoord.y = (1.0 - texCoord.y) * halfHeight;
+		sphereMeshLeft.setTexCoord(i, texCoord);
+	}
+	
+	for(int i = 0; i < sphereMeshRight.getNumVertices(); i++){
+		ofVec2f texCoord = sphereMeshRight.getTexCoord(i);
+		texCoord.x = (1.0 - texCoord.x) * texture.getWidth();
+		texCoord.y = (1.0 - texCoord.y) * halfHeight + halfHeight;
+		sphereMeshRight.setTexCoord(i, texCoord);
 	}
 	
 }
@@ -118,15 +169,29 @@ void testApp::draw()
 		}
 		
         ofSetColor(255);
-
+		ofNode n;
+		n.setOrientation(oculusRift.getOrientationQuat());
+		
+		ofQuaternion convergenceQ;
+		convergenceQ.makeRotate(converge*.5, n.getUpDir());
+		
 		glEnable(GL_DEPTH_TEST);
 		
 		oculusRift.beginLeftEye();
-		drawScene();
+		ofPushMatrix();
+		ofMatrix4x4 rm;
+		(leftCorrection * convergenceQ).get(rm);
+		ofMultMatrix(rm);
+		drawScene(sphereMeshLeft);
+		ofPopMatrix();
 		oculusRift.endLeftEye();
 		
 		oculusRift.beginRightEye();
-		drawScene();
+		ofPushMatrix();
+		(rightCorrection * convergenceQ.inverse()).get(rm);
+		ofMultMatrix(rm);
+		drawScene(sphereMeshRight);
+		ofPopMatrix();
 		oculusRift.endRightEye();
 		
 		oculusRift.draw();
@@ -151,27 +216,21 @@ void testApp::drawStringCentered(string str){
 }
 
 //--------------------------------------------------------------
-void testApp::drawScene()
+void testApp::drawScene(ofMesh& mesh)
 {
 	ofPushStyle();
 	ofPushMatrix();
-//	ofScale(1,-1,1);
 	
 	if(videoTexture.isAllocated()){
 		videoTexture.bind();
-		sphereMesh.draw();
+		mesh.draw();
 		videoTexture.unbind();
 	}
 	else{
 		videoTestPattern.getTextureReference().bind();
-		sphereMesh.draw();
+		mesh.draw();
 		videoTestPattern.getTextureReference().unbind();
 	}
-
-	//debug wireframe for fun
-//	ofDisableDepthTest();
-//	sphereMesh.drawWireframe();
-//	ofEnableDepthTest();
 	
 	ofPopMatrix();
 	ofPopStyle();
@@ -184,6 +243,38 @@ void testApp::keyPressed(int key)
 		//gotta toggle full screen for it to be right
 		ofToggleFullscreen();
 	}
+	
+	if(key == 'S'){
+		saveSettings();
+	}
+	
+	if(key == 'L'){
+		loadSettings();
+	}
+	
+	if(key == 'R'){
+		leftCorrection  = ofQuaternion();
+		rightCorrection = ofQuaternion();
+	}
+	
+	if(key == ' '){
+		if(player.isPlaying()){
+			player.stop();
+		}
+		else{
+			player.play();
+		}
+	}
+	
+	if(key == OF_KEY_LEFT){
+		converge -= .4;
+	}
+	else if(key == OF_KEY_RIGHT){
+		converge += .4;
+	}
+	
+//	cout << "X ROTATE " << xRotate << " Y ROTATE " << yRotate << endl;
+
 }
 
 //--------------------------------------------------------------
@@ -195,11 +286,40 @@ void testApp::keyReleased(int key)
 //--------------------------------------------------------------
 void testApp::mouseMoved(int x, int y)
 {
+	lastMouse = ofVec2f(x,y);
 }
 
 //--------------------------------------------------------------
 void testApp::mouseDragged(int x, int y, int button)
 {
+	
+	ofNode n;
+	n.setOrientation(oculusRift.getOrientationQuat());
+
+	ofVec2f curMouse(x,y);
+	if(x > ofGetWidth()*.1 && x < ofGetWidth()*.9 &&
+	   y > ofGetHeight()*.1 && y < ofGetHeight()*.9)
+	{
+		ofVec2f delta = lastMouse-curMouse;
+		ofQuaternion deltaXRot, deltaYRot;
+		deltaXRot.makeRotate(delta.x, n.getUpDir());
+		deltaYRot.makeRotate(delta.y, n.getSideDir());
+		rightCorrection *= (deltaXRot * deltaYRot);
+		if( x < ofGetWidth()*.5 ){
+			leftCorrection *= (deltaXRot * deltaYRot);
+		}
+	}
+	else{
+		float deltaZ = lastMouse.y - y;
+		ofQuaternion deltaZRot;
+		deltaZRot.makeRotate(deltaZ, n.getLookAtDir());
+		rightCorrection *= deltaZRot;
+		if( x < ofGetWidth()*.5 ){
+			leftCorrection *= deltaZRot;
+		}
+	}
+	
+	lastMouse = curMouse;
 }
 
 //--------------------------------------------------------------

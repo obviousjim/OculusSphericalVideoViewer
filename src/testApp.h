@@ -1,8 +1,9 @@
 #pragma once
 
 #include "ofMain.h"
-#include "ofxOculusRift.h"
+#include "ofxOculusDK2.h"
 #include "ofxFTGL.h"
+#include "ofxUI.h"
 
 #ifdef TARGET_WIN32
 #include "ofDirectShowPlayer.h"
@@ -16,7 +17,7 @@ class testApp : public ofBaseApp
 	void update();
 	void draw();
 	
-	void drawScene();
+	void drawScene(ofMesh& mesh);
 	
 	void keyPressed(int key);
 	void keyReleased(int key);
@@ -27,8 +28,11 @@ class testApp : public ofBaseApp
 	void windowResized(int w, int h);
 	void dragEvent(ofDragInfo dragInfo);
 	void gotMessage(ofMessage msg);
-
-	ofxOculusRift oculusRift;
+	
+	void loadSettings();
+	void saveSettings();
+	
+	ofxOculusDK2 oculusRift;
 	
 	#ifdef TARGET_WIN32
 	ofDirectShowPlayer player;
@@ -43,7 +47,18 @@ class testApp : public ofBaseApp
 	void createMeshWithTexture(ofTexture& texture);
 	ofImage videoTestPattern;
 	ofTexture videoTexture;
-	ofMesh sphereMesh;
+	ofMesh sphereMeshLeft;
+	ofMesh sphereMeshRight;
+
+	ofVec2f lastMouse;
+	ofQuaternion leftCorrection;
+	ofQuaternion rightCorrection;
+	
 	ofCamera cam;
-    
+	float sphereScale;
+	float converge;
+	bool applyInterocular;
+//	ofVec3f globalRotate;
+//	ofVec3f eyeRotate;
+	
 };
