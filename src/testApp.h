@@ -34,11 +34,7 @@ class testApp : public ofBaseApp
 	
 	ofxOculusDK2 oculusRift;
 	
-	#ifdef TARGET_WIN32
-	ofDirectShowPlayer player;
-	#else
 	ofVideoPlayer player;
-	#endif
 	
 	void drawStringCentered(string string);
 	ofxFTGLFont font;

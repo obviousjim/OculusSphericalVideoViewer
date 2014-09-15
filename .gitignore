@@ -115,3 +115,4 @@ sharedData/ignored/*
 /bin/OulusVideoPlayer/
 
 /icon_riftplayer.iconset/
+*.lib
