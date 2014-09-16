@@ -3,11 +3,7 @@
 #include "ofMain.h"
 #include "ofxOculusDK2.h"
 #include "ofxFTGL.h"
-#include "ofxUI.h"
-
-#ifdef TARGET_WIN32
-#include "ofDirectShowPlayer.h"
-#endif
+//#include "ofxUI.h"
 
 class testApp : public ofBaseApp
 {
@@ -45,7 +41,9 @@ class testApp : public ofBaseApp
 	ofTexture videoTexture;
 	ofMesh sphereMeshLeft;
 	ofMesh sphereMeshRight;
-
+    float sphereMeshWidth;
+    float sphereMeshHeight;
+    
 	ofVec2f lastMouse;
 	ofQuaternion leftCorrection;
 	ofQuaternion rightCorrection;
@@ -54,7 +52,5 @@ class testApp : public ofBaseApp
 	float sphereScale;
 	float converge;
 	bool applyInterocular;
-//	ofVec3f globalRotate;
-//	ofVec3f eyeRotate;
 	
 };

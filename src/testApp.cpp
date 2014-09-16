@@ -22,6 +22,9 @@ void testApp::setup() {
 //  CFRelease(resourcesURL);
 //  chdir(path);
 //	#endif
+    
+    sphereMeshWidth = 0;
+    sphereMeshHeight = 0;
 	
 	#ifndef TARGET_WIN32
 	player.setUseTexture(false);
@@ -104,16 +107,12 @@ void testApp::update()
 	
 	player.update();
 	if(player.isFrameNew()){
-		
-		if(!videoTexture.isAllocated() ||
-		   videoTexture.getWidth() != player.getWidth() ||
-		   videoTexture.getHeight() != player.getHeight())
-		{
-			videoTexture.allocate(player.getWidth(),player.getHeight(), GL_RGB);
-			createMeshWithTexture(videoTexture);
-		}
+        if(sphereMeshWidth != player.getWidth() ||
+           sphereMeshHeight != player.getHeight())
+        {
+            createMeshWithTexture(player.getTextureReference());
+        }
 
-		videoTexture.loadData(player.getPixelsRef());
 	}
 }
 
@@ -138,6 +137,9 @@ void testApp::createMeshWithTexture(ofTexture& texture){
 		texCoord.y = (1.0 - texCoord.y) * halfHeight + halfHeight;
 		sphereMeshRight.setTexCoord(i, texCoord);
 	}
+    
+    sphereMeshWidth = texture.getWidth();
+    sphereMeshHeight = texture.getHeight();
 	
 }
 
@@ -175,7 +177,7 @@ void testApp::draw()
 		ofQuaternion convergenceQ;
 		convergenceQ.makeRotate(converge*.5, n.getUpDir());
 		
-		glEnable(GL_DEPTH_TEST);
+		ofEnableDepthTest();
 		
 		oculusRift.beginLeftEye();
 		ofPushMatrix();
@@ -196,7 +198,7 @@ void testApp::draw()
 		
 		oculusRift.draw();
 		
-		glDisable(GL_DEPTH_TEST);
+		ofDisableDepthTest();
 		
     }
 	else{
@@ -221,10 +223,10 @@ void testApp::drawScene(ofMesh& mesh)
 	ofPushStyle();
 	ofPushMatrix();
 	
-	if(videoTexture.isAllocated()){
-		videoTexture.bind();
+	if(player.isLoaded()){
+        player.getTextureReference().bind();
 		mesh.draw();
-		videoTexture.unbind();
+		player.getTextureReference().unbind();
 	}
 	else{
 		videoTestPattern.getTextureReference().bind();
