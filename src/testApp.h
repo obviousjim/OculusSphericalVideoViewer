@@ -9,10 +9,18 @@ class testApp : public ofBaseApp
 {
   public:
 	
+    enum StereoMode{
+        DRAW_STEREO = 0,
+        DRAW_LEFT,
+        DRAW_RIGHT
+    };
+    
 	void setup();
 	void update();
 	void draw();
 	
+    void drawLeftScene();
+    void drawRightScene();
 	void drawScene(ofMesh& mesh);
 	
 	void keyPressed(int key);
@@ -52,5 +60,5 @@ class testApp : public ofBaseApp
 	float sphereScale;
 	float converge;
 	bool applyInterocular;
-	
+	StereoMode showMode; //0 =  stereo, 1 = left, 2 = right
 };

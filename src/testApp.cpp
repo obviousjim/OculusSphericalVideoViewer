@@ -25,7 +25,8 @@ void testApp::setup() {
     
     sphereMeshWidth = 0;
     sphereMeshHeight = 0;
-	
+	showMode = DRAW_STEREO;
+    
 	#ifndef TARGET_WIN32
 	player.setUseTexture(false);
 	#endif
@@ -104,16 +105,17 @@ void testApp::update()
 	if(!oculusRift.isSetup()){
 		return;
 	}
-	
-	player.update();
-	if(player.isFrameNew()){
-        if(sphereMeshWidth != player.getWidth() ||
-           sphereMeshHeight != player.getHeight())
-        {
-            createMeshWithTexture(player.getTextureReference());
-        }
+	if(player.isLoaded()){
+        player.update();
+        if(player.isFrameNew()){
+            if(sphereMeshWidth != player.getWidth() ||
+               sphereMeshHeight != player.getHeight())
+            {
+                createMeshWithTexture(player.getTextureReference());
+            }
 
-	}
+        }
+    }
 }
 
 //--------------------------------------------------------------
@@ -153,7 +155,7 @@ void testApp::draw()
 		string instructions = "'f' toggle full screen";
 		int width = fontSmall.stringWidth(instructions);
 		ofSetColor(255*.4);
-		fontSmall.drawString(instructions,oculusRift.getOculusViewport().getWidth() - width/2, 40);
+		fontSmall.drawString(instructions, ofGetWidth()/2 - width/2, 40);
 		ofPopStyle();
 		
 		if(!videoTexture.isAllocated()){
@@ -171,29 +173,26 @@ void testApp::draw()
 		}
 		
         ofSetColor(255);
-		ofNode n;
-		n.setOrientation(oculusRift.getOrientationQuat());
 		
-		ofQuaternion convergenceQ;
-		convergenceQ.makeRotate(converge*.5, n.getUpDir());
 		
 		ofEnableDepthTest();
 		
 		oculusRift.beginLeftEye();
-		ofPushMatrix();
-		ofMatrix4x4 rm;
-		(leftCorrection * convergenceQ).get(rm);
-		ofMultMatrix(rm);
-		drawScene(sphereMeshLeft);
-		ofPopMatrix();
+        if(showMode == DRAW_RIGHT){
+            drawRightScene();
+        }
+        else{
+            drawLeftScene();
+        }
 		oculusRift.endLeftEye();
 		
 		oculusRift.beginRightEye();
-		ofPushMatrix();
-		(rightCorrection * convergenceQ.inverse()).get(rm);
-		ofMultMatrix(rm);
-		drawScene(sphereMeshRight);
-		ofPopMatrix();
+        if(showMode == DRAW_LEFT){
+            drawLeftScene();
+        }
+        else{
+            drawRightScene();
+        }
 		oculusRift.endRightEye();
 		
 		oculusRift.draw();
@@ -209,6 +208,44 @@ void testApp::draw()
 	}
 
 }
+
+void testApp::drawLeftScene(){
+    ofPushMatrix();
+    
+    ofNode n;
+    n.setOrientation(oculusRift.getOrientationQuat());
+ 
+    ofQuaternion convergenceQ;
+    convergenceQ.makeRotate(converge*.5, n.getUpDir());
+
+    ofMatrix4x4 rm;
+    (leftCorrection * convergenceQ).get(rm);
+    
+    ofMultMatrix(rm);
+    drawScene(sphereMeshLeft);
+    
+    ofPopMatrix();
+
+}
+
+void testApp::drawRightScene(){
+    ofPushMatrix();
+
+    ofNode n;
+    n.setOrientation(oculusRift.getOrientationQuat());
+    
+    ofQuaternion convergenceQ;
+    convergenceQ.makeRotate(converge*.5, n.getUpDir());
+
+    ofMatrix4x4 rm;
+    (rightCorrection * convergenceQ.inverse()).get(rm);
+    
+    ofMultMatrix(rm);
+    drawScene(sphereMeshRight);
+    
+    ofPopMatrix();
+}
+
 
 //--------------------------------------------------------------
 void testApp::drawStringCentered(string str){
@@ -275,6 +312,14 @@ void testApp::keyPressed(int key)
 		converge += .4;
 	}
 	
+    if(key == OF_KEY_UP){
+        showMode = (StereoMode)(int(showMode)+1);
+        if(showMode > 2) showMode = (StereoMode)0;
+    }
+    if(key == OF_KEY_DOWN){
+        showMode = (StereoMode)(int(showMode)-1);
+        if(showMode < 0) showMode = (StereoMode)2;
+    }
 //	cout << "X ROTATE " << xRotate << " Y ROTATE " << yRotate << endl;
 
 }
@@ -352,13 +397,20 @@ void testApp::dragEvent(ofDragInfo dragInfo)
 {
 	//this is for the standalone player
 	#ifndef VIDEO_FILE_NAME
-	if(player.loadMovie( dragInfo.files[0] )){
-		player.play();
-		player.setLoopState(OF_LOOP_NORMAL);
-	}
-	else{
-		ofSystemAlertDialog("Video failed to load.");
-	}
+//	if(player.loadMovie( dragInfo.files[0] )){
+    if( ofToLower(ofFilePath::getFileExt(dragInfo.files[0])) == "mov" ){
+        if(player.loadMovie( dragInfo.files[0] )){
+            player.play();
+            player.setLoopState(OF_LOOP_NORMAL);
+        }
+        else{
+            ofSystemAlertDialog("Video failed to load.");
+        }
+    }
+    else{
+        videoTestPattern.loadImage("test-still.png");
+        createMeshWithTexture(videoTestPattern.getTextureReference());
+    }
 	#endif
 	
 }
