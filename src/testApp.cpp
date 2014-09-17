@@ -23,14 +23,13 @@ void testApp::setup() {
 //  chdir(path);
 //	#endif
     
+    showingVideo = false;
+    showingStill = false;
+    
     sphereMeshWidth = 0;
     sphereMeshHeight = 0;
 	showMode = DRAW_STEREO;
     
-	#ifndef TARGET_WIN32
-	player.setUseTexture(false);
-	#endif
-
 	font.loadFont("font/HelveticaNeueBold.ttf", 28);
 	fontSmall.loadFont("font/HelveticaNeueBold.ttf", 10);
 	
@@ -56,6 +55,9 @@ void testApp::setup() {
 		createMeshWithTexture(videoTestPattern.getTextureReference());
 		#endif
 	}
+    
+    loadSettings();
+
 }
 
 //--------------------------------------------------------------
@@ -76,6 +78,10 @@ void testApp::loadSettings(){
 							ofToFloat(b.getNextLine()));
 		
 		converge = ofToFloat( b.getNextLine() );
+        
+        showMode = (StereoMode)ofToInt( b.getNextLine() );
+
+        loadFile(b.getNextLine());
 	}
 		
 }
@@ -93,9 +99,13 @@ void testApp::saveSettings(){
 	b.append(ofToString(rightCorrection.y())+"\n");
 	b.append(ofToString(rightCorrection.z())+"\n");
 	b.append(ofToString(rightCorrection.w())+"\n");
-	
+    
 	b.append(ofToString(converge)+"\n");
 	
+    b.append(ofToString((int)showMode) + "\n");
+    
+    b.append(filePath + "\n");
+    
 	ofBufferToFile("settings.txt", b);
 }
 
@@ -105,15 +115,17 @@ void testApp::update()
 	if(!oculusRift.isSetup()){
 		return;
 	}
-	if(player.isLoaded()){
+    
+    if(showingVideo){
         player.update();
-        if(player.isFrameNew()){
-            if(sphereMeshWidth != player.getWidth() ||
-               sphereMeshHeight != player.getHeight())
-            {
-                createMeshWithTexture(player.getTextureReference());
+        if(player.isLoaded()){
+            if(player.isFrameNew()){
+                if(sphereMeshWidth != player.getWidth() ||
+                   sphereMeshHeight != player.getHeight())
+                {
+                    createMeshWithTexture(player.getTextureReference());
+                }
             }
-
         }
     }
 }
@@ -140,7 +152,7 @@ void testApp::createMeshWithTexture(ofTexture& texture){
 		sphereMeshRight.setTexCoord(i, texCoord);
 	}
     
-    sphereMeshWidth = texture.getWidth();
+    sphereMeshWidth  = texture.getWidth();
     sphereMeshHeight = texture.getHeight();
 	
 }
@@ -156,9 +168,24 @@ void testApp::draw()
 		int width = fontSmall.stringWidth(instructions);
 		ofSetColor(255*.4);
 		fontSmall.drawString(instructions, ofGetWidth()/2 - width/2, 40);
+        
+        
+        if(showMode == DRAW_STEREO){
+            instructions = "STEREO";
+        }
+        else if(showMode == DRAW_LEFT){
+            instructions = "MONO LEFT";
+        }
+        else{
+            instructions = "MONO RIGHT";
+        }
+        
+        width = fontSmall.stringWidth(instructions);
+        fontSmall.drawString(instructions, ofGetWidth()/2 - width/2, 80);
+
 		ofPopStyle();
-		
-		if(!videoTexture.isAllocated()){
+        
+		if(!showingVideo && !showingStill){
 			int overlayWidth  = 512;
 			int overlayHeight = 512;
 			string loadText = "Drag & Drop a video";
@@ -173,7 +200,6 @@ void testApp::draw()
 		}
 		
         ofSetColor(255);
-		
 		
 		ofEnableDepthTest();
 		
@@ -196,7 +222,7 @@ void testApp::draw()
 		oculusRift.endRightEye();
 		
 		oculusRift.draw();
-		
+
 		ofDisableDepthTest();
 		
     }
@@ -327,7 +353,6 @@ void testApp::keyPressed(int key)
 //--------------------------------------------------------------
 void testApp::keyReleased(int key)
 {
-
 }
 
 //--------------------------------------------------------------
@@ -397,20 +422,35 @@ void testApp::dragEvent(ofDragInfo dragInfo)
 {
 	//this is for the standalone player
 	#ifndef VIDEO_FILE_NAME
-//	if(player.loadMovie( dragInfo.files[0] )){
-    if( ofToLower(ofFilePath::getFileExt(dragInfo.files[0])) == "mov" ){
-        if(player.loadMovie( dragInfo.files[0] )){
+    loadFile(dragInfo.files[0]);
+	#endif
+}
+
+void testApp::loadFile(string path){
+    
+    filePath = "";
+    
+    if( ofToLower(ofFilePath::getFileExt(path)) == "mov" ){
+        showingStill = false;
+        if(player.loadMovie(path)){
             player.play();
             player.setLoopState(OF_LOOP_NORMAL);
+            showingVideo = true;
+            filePath = path;
         }
         else{
             ofSystemAlertDialog("Video failed to load.");
+            showingVideo = false;
         }
     }
     else{
-        videoTestPattern.loadImage("test-still.png");
-        createMeshWithTexture(videoTestPattern.getTextureReference());
+        showingVideo = false;
+        showingStill = videoTestPattern.loadImage( ofFilePath::getFileExt(path) );
+        if(showingStill){
+            createMeshWithTexture(videoTestPattern.getTextureReference());
+            filePath = path;
+        }
     }
-	#endif
-	
+
 }
+

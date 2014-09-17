@@ -320,8 +320,8 @@
 		03B62E1E19C7B7F400A19A35 /* src */ = {
 			isa = PBXGroup;
 			children = (
-				03B62E1F19C7B7F400A19A35 /* ofxOculusDK2.cpp */,
 				03B62E2019C7B7F400A19A35 /* ofxOculusDK2.h */,
+				03B62E1F19C7B7F400A19A35 /* ofxOculusDK2.cpp */,
 			);
 			path = src;
 			sourceTree = "<group>";

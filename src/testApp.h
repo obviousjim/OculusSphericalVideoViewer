@@ -46,7 +46,6 @@ class testApp : public ofBaseApp
 	
 	void createMeshWithTexture(ofTexture& texture);
 	ofImage videoTestPattern;
-	ofTexture videoTexture;
 	ofMesh sphereMeshLeft;
 	ofMesh sphereMeshRight;
     float sphereMeshWidth;
@@ -61,4 +60,9 @@ class testApp : public ofBaseApp
 	float converge;
 	bool applyInterocular;
 	StereoMode showMode; //0 =  stereo, 1 = left, 2 = right
+    string filePath;
+    void loadFile(string path);
+    
+    bool showingVideo;
+    bool showingStill;
 };
